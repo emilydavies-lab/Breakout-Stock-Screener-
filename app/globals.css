@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+:root {
+  --color-paper: #f5f2ee;
+  --color-ink: #1a1917;
+  --color-ink-soft: #6b6862;
+  --color-ink-line: #ddd8d1;
+}
+
+@theme inline {
+  --color-paper: var(--color-paper);
+  --color-ink: var(--color-ink);
+  --color-ink-soft: var(--color-ink-soft);
+  --color-ink-line: var(--color-ink-line);
+  --font-display: var(--font-canela);
+  --font-body: var(--font-sohne);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+}
