@@ -1,21 +1,60 @@
 import Link from "next/link";
+import { Target, Globe, Layers, Telescope } from "lucide-react";
 
 const MANIFESTO = [
-  "We look for businesses with superior business models, high returns on invested capital, and markets large enough to sustain exceptional growth.",
-  "We go anywhere. No geographic constraints. No sector bias. Just conviction.",
-  "We run one concentrated fund of 30 to 40 of our best ideas, balanced by Canada's strongest dividend growers to manage risk and reduce volatility.",
-  "And we stay curious — always looking at what's emerging, what's being built, and where the next exceptional opportunity is coming from.",
+  {
+    icon: Target,
+    body: (
+      <>
+        We look for businesses with superior business models, high returns
+        on invested capital, and markets large enough to sustain exceptional
+        growth.
+      </>
+    ),
+  },
+  {
+    icon: Globe,
+    body: (
+      <>
+        We go anywhere. No geographic constraints. No sector bias.{" "}
+        <em className="font-display italic text-ink">Just conviction.</em>
+      </>
+    ),
+  },
+  {
+    icon: Layers,
+    body: (
+      <>
+        We run one concentrated fund of 30 to 40 of our best ideas, balanced
+        by Canada&rsquo;s strongest dividend growers to manage risk and
+        reduce volatility.
+      </>
+    ),
+  },
+  {
+    icon: Telescope,
+    body: (
+      <>
+        And we stay curious — always looking at what&rsquo;s emerging,
+        what&rsquo;s being built, and where the next exceptional opportunity
+        is coming from.
+      </>
+    ),
+  },
 ];
 
 export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="mx-auto max-w-6xl px-6 pb-20 pt-24 sm:px-10 sm:pb-28 sm:pt-32">
-        <h1 className="max-w-4xl font-display text-5xl font-medium leading-[1.1] tracking-tight sm:text-6xl lg:text-7xl">
-          Since 2000, investing in exceptional companies built to grow.
+      <section className="mx-auto max-w-6xl px-6 py-28 sm:px-10 sm:py-36">
+        <p className="font-body text-xs uppercase tracking-[0.2em] text-ink-soft">
+          Independent investment management — since 2000
+        </p>
+        <h1 className="mt-6 max-w-[820px] font-display text-6xl font-medium leading-[1.1] tracking-tight sm:text-7xl">
+          Since 2000, investing in <em className="font-normal italic">exceptional companies</em> built to grow.
         </h1>
-        <p className="mt-8 max-w-xl font-body text-lg leading-relaxed text-ink-soft sm:text-xl">
+        <p className="mt-10 max-w-[480px] font-body text-lg leading-relaxed text-ink-soft sm:ml-auto sm:text-xl">
           One fund. Our best ideas — unconstrained by geography, sector, or
           convention. Relentlessly curious about what comes next.
         </p>
@@ -23,8 +62,8 @@ export default function Home() {
 
       {/* Who It's For */}
       <section className="border-t border-ink-line">
-        <div className="mx-auto grid max-w-6xl gap-8 px-6 py-20 sm:px-10 sm:py-28 lg:grid-cols-12 lg:gap-16">
-          <h2 className="font-display text-3xl font-medium leading-tight tracking-tight sm:text-4xl lg:col-span-5">
+        <div className="mx-auto grid max-w-6xl gap-8 px-6 py-24 sm:px-10 sm:py-32 lg:grid-cols-12 lg:items-end lg:gap-16">
+          <h2 className="font-display text-4xl font-medium leading-tight tracking-tight sm:text-[2.5rem] lg:col-span-5">
             For investors who have much to protect and more to build.
           </h2>
           <p className="font-body text-lg leading-relaxed text-ink-soft lg:col-span-6 lg:col-start-7">
@@ -38,19 +77,23 @@ export default function Home() {
       </section>
 
       {/* How We Invest */}
-      <section className="border-t border-ink-line">
-        <div className="mx-auto max-w-6xl px-6 py-20 sm:px-10 sm:py-28">
-          <h2 className="font-display text-3xl font-medium leading-tight tracking-tight sm:text-4xl">
+      <section className="border-t border-ink-line bg-paper-dim">
+        <div className="mx-auto max-w-6xl px-6 py-24 sm:px-10 sm:py-36">
+          <h2 className="font-display text-4xl font-medium leading-tight tracking-tight sm:text-5xl">
             How we invest.
           </h2>
-          <div className="mt-12 grid gap-10 sm:grid-cols-2 lg:gap-16">
-            {MANIFESTO.map((line) => (
-              <p
-                key={line}
-                className="font-body text-lg leading-relaxed text-ink-soft"
-              >
-                {line}
-              </p>
+          <div className="mt-16 grid gap-x-20 gap-y-15 sm:grid-cols-2">
+            {MANIFESTO.map(({ icon: Icon, body }, index) => (
+              <div key={index}>
+                <Icon
+                  className="h-7 w-7 text-ink-soft"
+                  strokeWidth={1.5}
+                  aria-hidden="true"
+                />
+                <p className="mt-6 font-body text-lg leading-relaxed text-ink-soft">
+                  {body}
+                </p>
+              </div>
             ))}
           </div>
         </div>
@@ -58,18 +101,23 @@ export default function Home() {
 
       {/* Performance Tease */}
       <section className="border-t border-ink-line">
-        <div className="mx-auto grid max-w-6xl gap-8 px-6 py-20 sm:px-10 sm:py-28 lg:grid-cols-12 lg:gap-16">
-          <h2 className="font-display text-3xl font-medium leading-tight tracking-tight sm:text-4xl lg:col-span-5">
-            A consistent track record, built over time.
-          </h2>
-          <div className="lg:col-span-6 lg:col-start-7">
-            <p className="font-body text-lg leading-relaxed text-ink-soft">
-              <span className="font-display text-4xl font-medium text-ink">
-                +10.0%
-              </span>{" "}
-              annualized since inception. Through bull markets and bear
-              markets, through volatility and uncertainty — a disciplined
-              approach that compounds over the long term.
+        <div className="mx-auto grid max-w-6xl gap-12 px-6 py-24 sm:px-10 sm:py-32 lg:grid-cols-[1.2fr_1fr] lg:items-center lg:gap-16">
+          <div>
+            <p className="font-display text-[7rem] font-medium leading-none tracking-tight sm:text-[8rem]">
+              +10.0%
+            </p>
+            <p className="mt-4 font-body text-xs uppercase tracking-[0.2em] text-ink-soft">
+              Annualized since inception, October 2016
+            </p>
+          </div>
+          <div>
+            <h2 className="font-display text-4xl font-medium leading-tight tracking-tight sm:text-[2.5rem]">
+              A consistent track record, built over time.
+            </h2>
+            <p className="mt-6 font-body text-lg leading-relaxed text-ink-soft">
+              Through bull markets and bear markets, through volatility and
+              uncertainty — a disciplined approach that compounds over the
+              long term.
             </p>
             <Link
               href="/performance"
@@ -82,12 +130,12 @@ export default function Home() {
       </section>
 
       {/* Team Intro */}
-      <section className="border-t border-ink-line">
-        <div className="mx-auto grid max-w-6xl gap-8 px-6 py-20 sm:px-10 sm:py-28 lg:grid-cols-12 lg:gap-16">
-          <h2 className="font-display text-3xl font-medium leading-tight tracking-tight sm:text-4xl lg:col-span-5">
-            Two generations. One set of values.
+      <section className="border-t border-ink-line bg-paper-dim">
+        <div className="mx-auto grid max-w-6xl gap-8 px-6 py-24 sm:px-10 sm:py-32 lg:grid-cols-12 lg:gap-16">
+          <h2 className="font-display text-4xl font-medium leading-tight tracking-tight sm:text-[2.5rem] lg:col-span-5">
+            Two generations. <em className="italic">One set of values.</em>
           </h2>
-          <div className="lg:col-span-6 lg:col-start-7">
+          <div className="lg:col-span-6 lg:col-start-7 lg:pt-20">
             <p className="font-body text-lg leading-relaxed text-ink-soft">
               Teal and Emily bring different perspectives to every investment
               decision — and the same unwavering commitment to integrity,
@@ -106,29 +154,27 @@ export default function Home() {
 
       {/* Insights Tease */}
       <section className="border-t border-ink-line">
-        <div className="mx-auto grid max-w-6xl gap-8 px-6 py-20 sm:px-10 sm:py-28 lg:grid-cols-12 lg:gap-16">
-          <h2 className="font-display text-3xl font-medium leading-tight tracking-tight sm:text-4xl lg:col-span-5">
+        <div className="mx-auto max-w-6xl px-6 py-24 sm:px-10 sm:py-36">
+          <h2 className="max-w-2xl font-display text-4xl font-medium leading-tight tracking-tight sm:text-5xl">
             Notes on markets, companies, and what we&rsquo;re watching.
           </h2>
-          <div className="lg:col-span-6 lg:col-start-7">
-            <p className="font-body text-lg leading-relaxed text-ink-soft">
-              Writing and conversation from Teal Linde and Emily Davies —
-              candid perspectives on the ideas shaping how we invest.
-            </p>
-            <Link
-              href="/insights"
-              className="mt-8 inline-block border-b border-ink pb-1 font-body text-sm tracking-wide transition-opacity hover:opacity-60"
-            >
-              Read Insights &rarr;
-            </Link>
-          </div>
+          <p className="mt-8 max-w-[480px] font-body text-lg leading-relaxed text-ink-soft">
+            Writing and conversation from Teal Linde and Emily Davies —
+            candid perspectives on the ideas shaping how we invest.
+          </p>
+          <Link
+            href="/insights"
+            className="mt-8 inline-block border-b border-ink pb-1 font-body text-sm tracking-wide transition-opacity hover:opacity-60"
+          >
+            Read Insights &rarr;
+          </Link>
         </div>
       </section>
 
       {/* Contact CTA */}
-      <section className="border-t border-ink-line">
-        <div className="mx-auto max-w-6xl px-6 py-20 sm:px-10 sm:py-28">
-          <h2 className="max-w-2xl font-display text-3xl font-medium leading-tight tracking-tight sm:text-4xl">
+      <section className="border-t border-ink-line bg-paper-dim">
+        <div className="mx-auto max-w-6xl px-6 py-24 sm:px-10 sm:py-36">
+          <h2 className="max-w-2xl font-display text-4xl font-medium leading-tight tracking-tight sm:text-5xl">
             Let&rsquo;s talk about where your portfolio goes from here.
           </h2>
           <Link

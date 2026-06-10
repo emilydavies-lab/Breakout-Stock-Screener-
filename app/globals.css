@@ -2,6 +2,7 @@
 
 :root {
   --color-paper: #f5f2ee;
+  --color-paper-dim: #ede9e2;
   --color-ink: #1a1917;
   --color-ink-soft: #6b6862;
   --color-ink-line: #ddd8d1;
@@ -9,6 +10,7 @@
 
 @theme inline {
   --color-paper: var(--color-paper);
+  --color-paper-dim: var(--color-paper-dim);
   --color-ink: var(--color-ink);
   --color-ink-soft: var(--color-ink-soft);
   --color-ink-line: var(--color-ink-line);
