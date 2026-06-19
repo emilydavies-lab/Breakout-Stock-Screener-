@@ -87,6 +87,9 @@ export default function Home() {
         <h1 className="max-w-[820px] font-display text-6xl font-medium leading-[1.1] tracking-tight sm:text-7xl">
           Over two decades investing in <em className="font-normal italic">exceptional companies</em> built to grow.
         </h1>
+        <p className="mt-6 max-w-[820px] font-display text-3xl font-medium leading-tight tracking-tight sm:text-4xl">
+          Expanding access to innovation.
+        </p>
         <p className="mt-10 max-w-[480px] font-body text-lg leading-relaxed text-ink-soft sm:ml-auto sm:text-xl">
           One fund. Our best ideas — unconstrained by geography, sector, or
           convention. Relentlessly curious about what comes next.
@@ -215,8 +218,12 @@ export default function Home() {
       <section className="border-t border-ink-line">
         <div className="mx-auto max-w-6xl px-6 py-24 sm:px-10 sm:py-32">
           <h2 className="font-display text-4xl font-medium leading-tight tracking-tight sm:text-5xl">
-            The Linde Equity Fund
+            Linde Equity&rsquo;s unique approach
           </h2>
+          <p className="mt-8 max-w-2xl font-body text-xl leading-relaxed text-ink-soft">
+            Investing in innovation through public markets with responsible
+            risk management.
+          </p>
           <h3 className="mt-12 font-display text-2xl font-medium tracking-tight sm:text-3xl">
             A consistent track record, built over time.
           </h3>
