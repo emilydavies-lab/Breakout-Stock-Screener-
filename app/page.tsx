@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Target, Globe, Layers, Telescope } from "lucide-react";
 
@@ -44,12 +45,12 @@ const MANIFESTO = [
 ];
 
 const HOLDINGS = [
-  "Microsoft",
-  "HubSpot",
-  "Monday.com",
-  "Uber",
-  "Aritzia",
-  "Kura Sushi",
+  { name: "Microsoft", domain: "microsoft.com" },
+  { name: "HubSpot", domain: "hubspot.com" },
+  { name: "Monday.com", domain: "monday.com" },
+  { name: "Uber", domain: "uber.com" },
+  { name: "Aritzia", domain: "aritzia.com" },
+  { name: "Kura Sushi", domain: "kurasushi.com" },
 ];
 
 const TAKES = [
@@ -106,8 +107,42 @@ export default function Home() {
         </div>
       </section>
 
-      {/* How We Invest */}
+      {/* Takes Feed */}
       <section className="border-t border-ink-line bg-paper-dim">
+        <div className="mx-auto max-w-6xl px-6 py-30 sm:px-10">
+          <h2 className="font-display text-5xl font-medium leading-tight tracking-tight sm:text-6xl">
+            Takes
+          </h2>
+          <div className="mt-12 grid gap-10 sm:grid-cols-3 sm:gap-8">
+            {TAKES.map(({ type, title, date, author }) => (
+              <Link
+                key={title}
+                href="/takes"
+                className="block border-t border-ink pt-6 transition-opacity hover:opacity-70"
+              >
+                <p className="font-body text-xs uppercase tracking-[0.2em] text-ink-soft">
+                  {type}
+                </p>
+                <p className="mt-4 font-display text-2xl font-medium leading-snug tracking-tight">
+                  {title}
+                </p>
+                <p className="mt-4 font-body text-sm text-ink-soft">
+                  {author} &middot; {date}
+                </p>
+              </Link>
+            ))}
+          </div>
+          <Link
+            href="/takes"
+            className="mt-12 inline-block border-b border-ink pb-1 font-body text-sm tracking-wide transition-opacity hover:opacity-60"
+          >
+            Read all takes &rarr;
+          </Link>
+        </div>
+      </section>
+
+      {/* How We Invest */}
+      <section className="border-t border-ink-line">
         <div className="mx-auto max-w-6xl px-6 py-24 sm:px-10 sm:py-36">
           <h2 className="font-display text-4xl font-medium leading-tight tracking-tight sm:text-5xl">
             How we invest.
@@ -135,11 +170,19 @@ export default function Home() {
           <h2 className="max-w-2xl font-display text-4xl font-medium leading-tight tracking-tight sm:text-5xl">
             A few of the companies defining what&rsquo;s next.
           </h2>
-          <ul className="mt-12 grid gap-6 font-body text-lg text-ink-soft sm:grid-cols-3 sm:gap-x-12 sm:gap-y-8">
-            {HOLDINGS.map((name) => (
-              <li key={name}>{name}</li>
+          <div className="mt-12 grid grid-cols-2 items-center gap-x-10 gap-y-10 sm:flex sm:flex-wrap sm:justify-between sm:gap-x-12">
+            {HOLDINGS.map(({ name, domain }) => (
+              <Image
+                key={domain}
+                src={`https://logo.clearbit.com/${domain}`}
+                alt={name}
+                width={120}
+                height={36}
+                unoptimized
+                className="h-8 w-auto object-contain brightness-0 grayscale sm:h-9"
+              />
             ))}
-          </ul>
+          </div>
           <p className="mt-12 font-body text-sm text-ink-soft">
             A selection of current holdings. Not a complete list.
           </p>
@@ -224,40 +267,6 @@ export default function Home() {
               Meet the Team &rarr;
             </Link>
           </div>
-        </div>
-      </section>
-
-      {/* Takes Feed */}
-      <section className="border-t border-ink-line">
-        <div className="mx-auto max-w-6xl px-6 py-24 sm:px-10 sm:py-36">
-          <h2 className="font-display text-4xl font-medium leading-tight tracking-tight sm:text-5xl">
-            Takes
-          </h2>
-          <div className="mt-12 grid gap-10 sm:grid-cols-3 sm:gap-8">
-            {TAKES.map(({ type, title, date, author }) => (
-              <Link
-                key={title}
-                href="/takes"
-                className="block border-t border-ink-line pt-6 transition-opacity hover:opacity-70"
-              >
-                <p className="font-body text-xs uppercase tracking-[0.2em] text-ink-soft">
-                  {type}
-                </p>
-                <p className="mt-4 font-display text-2xl font-medium leading-snug tracking-tight">
-                  {title}
-                </p>
-                <p className="mt-4 font-body text-sm text-ink-soft">
-                  {author} &middot; {date}
-                </p>
-              </Link>
-            ))}
-          </div>
-          <Link
-            href="/takes"
-            className="mt-12 inline-block border-b border-ink pb-1 font-body text-sm tracking-wide transition-opacity hover:opacity-60"
-          >
-            Read all takes &rarr;
-          </Link>
         </div>
       </section>
 
