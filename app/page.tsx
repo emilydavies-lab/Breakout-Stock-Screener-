@@ -129,8 +129,36 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Team Intro */}
+      {/* Track Record Callout */}
       <section className="border-t border-ink-line bg-paper-dim">
+        <div className="mx-auto max-w-6xl px-6 py-25 sm:px-10">
+          <h2 className="font-display text-4xl font-medium leading-tight tracking-tight sm:text-5xl">
+            A track record that predates the fund.
+          </h2>
+          <div className="mt-8 max-w-[620px] space-y-6 font-body text-lg leading-relaxed text-ink-soft">
+            <p>
+              Before Linde Equity managed a single dollar, we were publishing
+              stock picks — and getting them right. The Linde Equity Report
+              ran for over two decades, earning multiple #1 rankings from the
+              Hulbert Financial Digest, including best-performing stock
+              newsletter in North America over the preceding decade in 2016.
+            </p>
+            <p>
+              The investment counsel was founded because readers asked us to
+              manage their money directly. Not the other way around.
+            </p>
+          </div>
+          <Link
+            href="/our-story"
+            className="mt-8 inline-block border-b border-ink pb-1 font-body text-sm tracking-wide transition-opacity hover:opacity-60"
+          >
+            Read our story &rarr;
+          </Link>
+        </div>
+      </section>
+
+      {/* Team Intro */}
+      <section className="border-t border-ink-line">
         <div className="mx-auto grid max-w-6xl gap-8 px-6 py-24 sm:px-10 sm:py-32 lg:grid-cols-12 lg:gap-16">
           <h2 className="font-display text-4xl font-medium leading-tight tracking-tight sm:text-[2.5rem] lg:col-span-5">
             Two generations. <em className="italic">One set of values.</em>
