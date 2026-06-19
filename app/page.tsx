@@ -55,8 +55,8 @@ const HOLDINGS = [
 
 const TAKES = [
   {
-    type: "Podcast",
-    title: "Why we still believe in active management",
+    type: "Writing",
+    title: "SpaceX IPO and why we aren't participating",
     date: "May 12, 2026",
     author: "Teal Linde",
   },
@@ -93,7 +93,7 @@ export default function Home() {
 
       {/* Who It's For */}
       <section id="who-its-for" className="border-t border-ink-line bg-paper-clay">
-        <div className="mx-auto grid max-w-6xl gap-8 px-6 py-24 sm:px-10 sm:py-32 lg:grid-cols-12 lg:items-end lg:gap-16">
+        <div className="mx-auto grid max-w-6xl gap-8 px-6 py-24 sm:px-10 sm:py-32 lg:grid-cols-12 lg:items-start lg:gap-16">
           <h2 className="font-display text-4xl font-medium leading-tight tracking-tight sm:text-[2.5rem] lg:col-span-5">
             For investors who have much to protect and more to build.
           </h2>
