@@ -211,8 +211,31 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Track Record Callout */}
+      {/* Performance Tease */}
       <section className="border-t border-ink-line">
+        <div className="mx-auto max-w-6xl px-6 py-24 sm:px-10 sm:py-32">
+          <h2 className="font-display text-4xl font-medium leading-tight tracking-tight sm:text-5xl">
+            The Linde Equity Fund
+          </h2>
+          <h3 className="mt-12 font-display text-2xl font-medium tracking-tight sm:text-3xl">
+            A consistent track record, built over time.
+          </h3>
+          <p className="mt-6 max-w-2xl font-body text-lg leading-relaxed text-ink-soft">
+            +10.0% annualized since inception. Through bull markets and bear
+            markets, through volatility and uncertainty — a disciplined
+            approach that compounds over the long term.
+          </p>
+          <Link
+            href="/performance"
+            className="mt-8 inline-block border-b border-ink pb-1 font-body text-sm tracking-wide transition-opacity hover:opacity-60"
+          >
+            View Performance &rarr;
+          </Link>
+        </div>
+      </section>
+
+      {/* Track Record Callout */}
+      <section className="border-t border-ink-line bg-paper-dim">
         <div className="mx-auto max-w-6xl px-6 py-25 sm:px-10">
           <h2 className="max-w-3xl font-display text-4xl font-medium leading-tight tracking-tight sm:text-5xl">
             Before managing money, we were writing about it — and winning.
@@ -253,36 +276,6 @@ export default function Home() {
           >
             Read our story &rarr;
           </Link>
-        </div>
-      </section>
-
-      {/* Performance Tease */}
-      <section className="border-t border-ink-line bg-paper-dim">
-        <div className="mx-auto grid max-w-6xl gap-12 px-6 py-24 sm:px-10 sm:py-32 lg:grid-cols-[1.2fr_1fr] lg:items-center lg:gap-16">
-          <div>
-            <p className="font-display text-[7rem] font-medium leading-none tracking-tight sm:text-[8rem]">
-              +10.0%
-            </p>
-            <p className="mt-4 font-body text-xs uppercase tracking-[0.2em] text-ink-soft">
-              Annualized since inception, October 2016
-            </p>
-          </div>
-          <div>
-            <h2 className="font-display text-4xl font-medium leading-tight tracking-tight sm:text-[2.5rem]">
-              A consistent track record, built over time.
-            </h2>
-            <p className="mt-6 font-body text-lg leading-relaxed text-ink-soft">
-              Through bull markets and bear markets, through volatility and
-              uncertainty — a disciplined approach that compounds over the
-              long term.
-            </p>
-            <Link
-              href="/performance"
-              className="mt-8 inline-block border-b border-ink pb-1 font-body text-sm tracking-wide transition-opacity hover:opacity-60"
-            >
-              View Performance &rarr;
-            </Link>
-          </div>
         </div>
       </section>
 
