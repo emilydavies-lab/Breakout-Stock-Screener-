@@ -26,6 +26,34 @@ const ANNUALIZED_RETURNS = [
   { period: "Since Inception (Oct 2016)", value: "+10.0%" },
 ];
 
+const FUND_BENEFITS = [
+  {
+    label: "Highly liquid",
+    description:
+      "Invested entirely in publicly traded securities — no lock-ups, no gates, no capital calls.",
+  },
+  {
+    label: "One fund",
+    description:
+      "We manage a single concentrated portfolio. Every client owns the same best ideas.",
+  },
+  {
+    label: "Transparent",
+    description:
+      "Quarterly reporting, published thinking, and two investors who stand behind every position publicly.",
+  },
+  {
+    label: "Registered accounts eligible",
+    description:
+      "Available for investment through RRSP, TFSA, RRIF, and corporate accounts.",
+  },
+  {
+    label: "Minimum investment",
+    description:
+      "$1,000,000 household minimum. Linde Access available from $250,000.",
+  },
+];
+
 const ACCOUNT_TYPES = [
   { type: "Individual & Joint Non-Registered", minimum: "$1,000,000 household" },
   { type: "RRSP / RRIF", minimum: "$1,000,000 household" },
@@ -57,6 +85,31 @@ export default function PerformancePage() {
             wanted Teal to manage their portfolios directly, not just write
             about them.
           </p>
+        </div>
+      </section>
+
+      {/* Fund Benefits */}
+      <section className="border-t border-ink-line bg-paper">
+        <div className="mx-auto max-w-6xl px-6 py-24 sm:px-10 sm:py-32">
+          <h2 className="font-display text-4xl font-medium leading-tight tracking-tight sm:text-5xl">
+            Why the Linde Equity Fund
+          </h2>
+          <div className="mt-12">
+            {FUND_BENEFITS.map(({ label, description }) => (
+              <div
+                key={label}
+                className="grid gap-4 border-t border-ink-line py-8 sm:grid-cols-12 sm:gap-8"
+              >
+                <p className="font-display text-xl font-medium tracking-tight sm:col-span-4 sm:text-2xl">
+                  {label}
+                </p>
+                <p className="font-body text-base leading-relaxed text-ink-soft sm:col-span-7 sm:col-start-6">
+                  {description}
+                </p>
+              </div>
+            ))}
+            <div className="border-t border-ink-line" />
+          </div>
         </div>
       </section>
 

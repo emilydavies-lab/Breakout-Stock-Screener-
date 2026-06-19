@@ -16,8 +16,8 @@ const MANIFESTO = [
     icon: Globe,
     body: (
       <>
-        We go anywhere. No geographic constraints. No sector bias.{" "}
-        <em className="font-display italic text-ink">Just conviction.</em>
+        We go anywhere. No geographic constraints. No sector bias. Just
+        conviction.
       </>
     ),
   },
