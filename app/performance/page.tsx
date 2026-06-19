@@ -8,7 +8,6 @@ export const metadata: Metadata = {
 
 const HEADLINE_STATS = [
   { label: "Inception", value: "October 2016" },
-  { label: "Strategy", value: "Public Equities" },
   { label: "Holdings", value: "30–40 stocks" },
   { label: "Annualized return since inception", value: "+10.0%" },
 ];
@@ -25,7 +24,7 @@ export default function PerformancePage() {
           Performance
         </h1>
 
-        <div className="mt-16 grid gap-10 sm:grid-cols-4 sm:gap-8">
+        <div className="mt-16 grid gap-10 sm:grid-cols-3 sm:gap-8">
           {HEADLINE_STATS.map(({ label, value }) => (
             <div key={label} className="border-t border-ink-line pt-6">
               <p className="font-display text-3xl font-medium tracking-tight sm:text-4xl">

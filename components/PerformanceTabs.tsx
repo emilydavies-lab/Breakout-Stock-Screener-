@@ -26,7 +26,17 @@ const FUND_BENEFITS = [
   {
     label: "Transparent",
     description:
-      "Quarterly reporting, published thinking, and two investors who stand behind every position publicly.",
+      "Quarterly reporting, published thinking, and full transparency into what we own, why.",
+  },
+  {
+    label: "Simple tax reporting",
+    description:
+      "One T3 slip per year. No complex partnership structures or additional filings.",
+  },
+  {
+    label: "Diversified investing",
+    description:
+      "30 to 40 stocks across sectors and geographies — unconstrained, and built to compound over the long term.",
   },
   {
     label: "Registered accounts eligible",
@@ -130,17 +140,8 @@ export default function PerformanceTabs() {
               <h2 className="max-w-3xl font-display text-4xl font-medium leading-tight tracking-tight sm:text-5xl">
                 Before managing money, we were writing about it.
               </h2>
-              <p className="mt-8 font-body text-lg leading-relaxed text-ink-soft">
-                The Linde Equity Report ran for 20 years, serving
-                do-it-yourself investors with independent stock research. It
-                became the benchmark for newsletter performance in North
-                America, earning multiple #1 rankings from the Hulbert
-                Financial Digest. The investment counsel was founded because
-                readers asked us to manage their money directly. Not the
-                other way around.
-              </p>
 
-              <div className="mt-16 grid gap-12 sm:grid-cols-3 sm:gap-8">
+              <div className="mt-12 grid gap-12 sm:grid-cols-3 sm:gap-8">
                 {REPORT_STATS.map(({ value, caption }) => (
                   <div key={caption}>
                     <p className="font-display text-6xl font-medium leading-none tracking-tight sm:text-7xl">
@@ -153,7 +154,17 @@ export default function PerformanceTabs() {
                 ))}
               </div>
 
-              <p className="mt-12 font-body text-sm text-ink-soft">
+              <p className="mt-16 font-body text-lg leading-relaxed text-ink-soft">
+                The Linde Equity Report ran for 20 years, serving
+                do-it-yourself investors with independent stock research. It
+                became the benchmark for newsletter performance in North
+                America, earning multiple #1 rankings from the Hulbert
+                Financial Digest. The investment counsel was founded because
+                readers asked us to manage their money directly. Not the
+                other way around.
+              </p>
+
+              <p className="mt-8 font-body text-sm text-ink-soft">
                 The Linde Equity Report is no longer publishing. Its
                 investment approach forms the foundation of Linde Equity.
               </p>
