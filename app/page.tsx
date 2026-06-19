@@ -92,18 +92,40 @@ export default function Home() {
       </section>
 
       {/* Who It's For */}
-      <section className="border-t border-ink-line">
+      <section id="who-its-for" className="border-t border-ink-line bg-paper-clay">
         <div className="mx-auto grid max-w-6xl gap-8 px-6 py-24 sm:px-10 sm:py-32 lg:grid-cols-12 lg:items-end lg:gap-16">
           <h2 className="font-display text-4xl font-medium leading-tight tracking-tight sm:text-[2.5rem] lg:col-span-5">
             For investors who have much to protect and more to build.
           </h2>
-          <p className="font-body text-lg leading-relaxed text-ink-soft lg:col-span-6 lg:col-start-7">
-            Whether you&rsquo;ve built a business, a practice, or a career —
-            you want your wealth managed with the same rigour and
-            intentionality you brought to earning it. Linde Equity brings
-            institutional-grade thinking to established investors who expect
-            more from their money.
-          </p>
+          <div className="lg:col-span-6 lg:col-start-7">
+            <p className="font-body text-lg leading-relaxed text-ink-soft">
+              Whether you&rsquo;ve built a business, a practice, or a career —
+              you want your wealth managed with the same rigour and
+              intentionality you brought to earning it. Linde Equity brings
+              institutional-grade thinking to established investors who expect
+              more from their money.
+            </p>
+            <div className="mt-10 flex flex-col gap-6">
+              <Link
+                href="/for-physicians"
+                className="font-body text-base tracking-wide transition-opacity hover:opacity-60"
+              >
+                Physicians &rarr;
+              </Link>
+              <Link
+                href="/for-business-owners"
+                className="font-body text-base tracking-wide transition-opacity hover:opacity-60"
+              >
+                Business Owners &amp; Entrepreneurs &rarr;
+              </Link>
+              <Link
+                href="/for-professionals"
+                className="font-body text-base tracking-wide transition-opacity hover:opacity-60"
+              >
+                Lawyers, Executives &amp; Accountants &rarr;
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 
