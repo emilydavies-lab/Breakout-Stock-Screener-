@@ -220,7 +220,7 @@ export default function Home() {
           <h2 className="max-w-3xl font-display text-4xl font-medium leading-tight tracking-tight sm:text-5xl">
             Before managing money, we were writing about it — and winning.
           </h2>
-          <div className="mt-8 max-w-[620px] space-y-6 font-body text-lg leading-relaxed text-ink-soft">
+          <div className="mt-8 space-y-6 font-body text-lg leading-relaxed text-ink-soft">
             <p>
               The Linde Equity Report ran for 20 years, serving
               do-it-yourself investors with independent stock research. It
@@ -247,7 +247,7 @@ export default function Home() {
 
           <p className="mt-12 max-w-[620px] font-body text-sm text-ink-soft">
             The Linde Equity Report is no longer publishing. Its investment
-            approach forms the foundation of Linde Equity Investment Counsel.
+            approach forms the foundation of Linde Equity.
           </p>
 
           <Link
