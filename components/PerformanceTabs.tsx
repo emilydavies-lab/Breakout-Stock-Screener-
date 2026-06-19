@@ -183,13 +183,13 @@ export default function PerformanceTabs() {
               </div>
 
               <p className="mt-16 font-body text-lg leading-relaxed text-ink-soft">
-                The Linde Equity Report ran for 20 years, serving
-                do-it-yourself investors with independent stock research. It
-                became the benchmark for newsletter performance in North
-                America, earning multiple #1 rankings from the Hulbert
-                Financial Digest. The investment counsel was founded because
-                readers asked us to manage their money directly. Not the
-                other way around.
+                The Linde Equity Report ran for 20 years, serving DIY
+                investors with independent stock research. It earned
+                multiple #1 rankings from the Hulbert Financial Digest and
+                was recognized by The Vancouver Sun, CNBC, BNN, CBS Radio,
+                and The Wall Street Journal. The attention it generated
+                brought investors to our door — asking us to manage their
+                money directly. Not the other way around.
               </p>
 
               <p className="mt-8 font-body text-sm text-ink-soft">
