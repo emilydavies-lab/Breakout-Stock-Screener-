@@ -85,12 +85,46 @@ export default function Home() {
       {/* Hero */}
       <section className="mx-auto max-w-6xl px-6 py-28 sm:px-10 sm:py-36">
         <h1 className="max-w-[820px] font-display text-6xl font-medium leading-[1.1] tracking-tight sm:text-7xl">
-          Since 2000, investing in <em className="font-normal italic">exceptional companies</em> built to grow.
+          Over two decades investing in <em className="font-normal italic">exceptional companies</em> built to grow.
         </h1>
         <p className="mt-10 max-w-[480px] font-body text-lg leading-relaxed text-ink-soft sm:ml-auto sm:text-xl">
           One fund. Our best ideas — unconstrained by geography, sector, or
           convention. Relentlessly curious about what comes next.
         </p>
+      </section>
+
+      {/* Takes Feed */}
+      <section className="border-t border-ink-line bg-paper-dim">
+        <div className="mx-auto max-w-6xl px-6 py-30 sm:px-10">
+          <h2 className="font-display text-5xl font-medium leading-tight tracking-tight sm:text-6xl">
+            Takes
+          </h2>
+          <div className="mt-12 grid gap-10 sm:grid-cols-3 sm:gap-8">
+            {TAKES.map(({ type, title, date, author }) => (
+              <Link
+                key={title}
+                href="/takes"
+                className="block border-t border-ink pt-6 transition-opacity hover:opacity-70"
+              >
+                <p className="font-body text-xs uppercase tracking-[0.2em] text-ink-soft">
+                  {type}
+                </p>
+                <p className="mt-4 font-display text-2xl font-medium leading-snug tracking-tight">
+                  {title}
+                </p>
+                <p className="mt-4 font-body text-sm text-ink-soft">
+                  {author} &middot; {date}
+                </p>
+              </Link>
+            ))}
+          </div>
+          <Link
+            href="/takes"
+            className="mt-12 inline-block border-b border-ink pb-1 font-body text-sm tracking-wide transition-opacity hover:opacity-60"
+          >
+            Read all takes &rarr;
+          </Link>
+        </div>
       </section>
 
       {/* Who It's For */}
@@ -131,40 +165,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Takes Feed */}
-      <section className="border-t border-ink-line bg-paper-dim">
-        <div className="mx-auto max-w-6xl px-6 py-30 sm:px-10">
-          <h2 className="font-display text-5xl font-medium leading-tight tracking-tight sm:text-6xl">
-            Takes
-          </h2>
-          <div className="mt-12 grid gap-10 sm:grid-cols-3 sm:gap-8">
-            {TAKES.map(({ type, title, date, author }) => (
-              <Link
-                key={title}
-                href="/takes"
-                className="block border-t border-ink pt-6 transition-opacity hover:opacity-70"
-              >
-                <p className="font-body text-xs uppercase tracking-[0.2em] text-ink-soft">
-                  {type}
-                </p>
-                <p className="mt-4 font-display text-2xl font-medium leading-snug tracking-tight">
-                  {title}
-                </p>
-                <p className="mt-4 font-body text-sm text-ink-soft">
-                  {author} &middot; {date}
-                </p>
-              </Link>
-            ))}
-          </div>
-          <Link
-            href="/takes"
-            className="mt-12 inline-block border-b border-ink pb-1 font-body text-sm tracking-wide transition-opacity hover:opacity-60"
-          >
-            Read all takes &rarr;
-          </Link>
-        </div>
-      </section>
-
       {/* How We Invest */}
       <section className="border-t border-ink-line">
         <div className="mx-auto max-w-6xl px-6 py-24 sm:px-10 sm:py-36">
@@ -192,7 +192,7 @@ export default function Home() {
       <section className="border-t border-ink-line bg-paper-dim">
         <div className="mx-auto max-w-6xl px-6 py-25 sm:px-10">
           <h2 className="max-w-2xl font-display text-4xl font-medium leading-tight tracking-tight sm:text-5xl">
-            A few of the companies defining what&rsquo;s next.
+            A few of the companies we own defining what&rsquo;s next.
           </h2>
           <div className="mt-12 grid grid-cols-2 items-center gap-x-8 gap-y-10 sm:flex sm:flex-row sm:items-center sm:justify-between sm:gap-x-10">
             {HOLDINGS.map(({ name, domain }) => (

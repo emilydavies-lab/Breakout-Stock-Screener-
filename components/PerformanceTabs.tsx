@@ -134,8 +134,36 @@ export default function PerformanceTabs() {
 
       {activeTab === "Highlights" && (
         <>
-          {/* Highlights — Report legacy */}
+          {/* Highlights — Fund Benefits */}
           <section className="border-t border-ink-line bg-paper-dim">
+            <div className="mx-auto max-w-6xl px-6 py-24 sm:px-10 sm:py-32">
+              <h2 className="font-display text-4xl font-medium leading-tight tracking-tight sm:text-5xl">
+                The Linde Equity Fund
+              </h2>
+              <p className="mt-12 font-display text-2xl font-medium tracking-tight">
+                Why the Linde Equity Fund
+              </p>
+              <div className="mt-8">
+                {FUND_BENEFITS.map(({ label, description }) => (
+                  <div
+                    key={label}
+                    className="grid gap-4 border-t border-ink-line py-8 sm:grid-cols-12 sm:gap-8"
+                  >
+                    <p className="font-display text-xl font-medium tracking-tight sm:col-span-4 sm:text-2xl">
+                      {label}
+                    </p>
+                    <p className="font-body text-base leading-relaxed text-ink-soft sm:col-span-7 sm:col-start-6">
+                      {description}
+                    </p>
+                  </div>
+                ))}
+                <div className="border-t border-ink-line" />
+              </div>
+            </div>
+          </section>
+
+          {/* Highlights — Report legacy */}
+          <section className="border-t border-ink-line bg-paper">
             <div className="mx-auto max-w-6xl px-6 py-24 sm:px-10 sm:py-32">
               <h2 className="max-w-3xl font-display text-4xl font-medium leading-tight tracking-tight sm:text-5xl">
                 Before managing money, we were writing about it.
@@ -168,31 +196,13 @@ export default function PerformanceTabs() {
                 The Linde Equity Report is no longer publishing. Its
                 investment approach forms the foundation of Linde Equity.
               </p>
-            </div>
-          </section>
 
-          {/* Highlights — Fund Benefits */}
-          <section className="border-t border-ink-line bg-paper">
-            <div className="mx-auto max-w-6xl px-6 py-24 sm:px-10 sm:py-32">
-              <h2 className="font-display text-4xl font-medium leading-tight tracking-tight sm:text-5xl">
-                Why the Linde Equity Fund
-              </h2>
-              <div className="mt-12">
-                {FUND_BENEFITS.map(({ label, description }) => (
-                  <div
-                    key={label}
-                    className="grid gap-4 border-t border-ink-line py-8 sm:grid-cols-12 sm:gap-8"
-                  >
-                    <p className="font-display text-xl font-medium tracking-tight sm:col-span-4 sm:text-2xl">
-                      {label}
-                    </p>
-                    <p className="font-body text-base leading-relaxed text-ink-soft sm:col-span-7 sm:col-start-6">
-                      {description}
-                    </p>
-                  </div>
-                ))}
-                <div className="border-t border-ink-line" />
-              </div>
+              <Link
+                href="/our-story"
+                className="mt-8 inline-block border-b border-ink pb-1 font-body text-sm tracking-wide transition-opacity hover:opacity-60"
+              >
+                Read our story &rarr;
+              </Link>
             </div>
           </section>
         </>
