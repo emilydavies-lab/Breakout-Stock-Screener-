@@ -84,10 +84,7 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="mx-auto max-w-6xl px-6 py-28 sm:px-10 sm:py-36">
-        <p className="font-body text-xs uppercase tracking-[0.2em] text-ink-soft">
-          Independent investment management — since 2000
-        </p>
-        <h1 className="mt-6 max-w-[820px] font-display text-6xl font-medium leading-[1.1] tracking-tight sm:text-7xl">
+        <h1 className="max-w-[820px] font-display text-6xl font-medium leading-[1.1] tracking-tight sm:text-7xl">
           Since 2000, investing in <em className="font-normal italic">exceptional companies</em> built to grow.
         </h1>
         <p className="mt-10 max-w-[480px] font-body text-lg leading-relaxed text-ink-soft sm:ml-auto sm:text-xl">
