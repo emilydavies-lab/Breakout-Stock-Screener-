@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Target, Globe, Layers, Telescope } from "lucide-react";
 
@@ -51,6 +50,12 @@ const HOLDINGS = [
   { name: "Uber", domain: "uber.com" },
   { name: "Aritzia", domain: "aritzia.com" },
   { name: "Kura Sushi", domain: "kurasushi.com" },
+];
+
+const REPORT_STATS = [
+  { value: "20 Years", caption: "May 2000 to May 2020" },
+  { value: "240", caption: "Stock recommendations" },
+  { value: "24%", caption: "Annualized average return" },
 ];
 
 const TAKES = [
@@ -192,16 +197,14 @@ export default function Home() {
           <h2 className="max-w-2xl font-display text-4xl font-medium leading-tight tracking-tight sm:text-5xl">
             A few of the companies defining what&rsquo;s next.
           </h2>
-          <div className="mt-12 grid grid-cols-2 items-center gap-x-10 gap-y-10 sm:flex sm:flex-wrap sm:justify-between sm:gap-x-12">
+          <div className="mt-12 grid grid-cols-2 items-center gap-x-8 gap-y-10 sm:flex sm:flex-row sm:items-center sm:justify-between sm:gap-x-10">
             {HOLDINGS.map(({ name, domain }) => (
-              <Image
+              <img
                 key={domain}
                 src={`https://logo.clearbit.com/${domain}`}
                 alt={name}
-                width={120}
-                height={36}
-                unoptimized
-                className="h-8 w-auto object-contain brightness-0 grayscale sm:h-9"
+                className="h-10 w-auto object-contain grayscale"
+                style={{ filter: "grayscale(100%)" }}
               />
             ))}
           </div>
@@ -244,22 +247,39 @@ export default function Home() {
       {/* Track Record Callout */}
       <section className="border-t border-ink-line bg-paper-dim">
         <div className="mx-auto max-w-6xl px-6 py-25 sm:px-10">
-          <h2 className="font-display text-4xl font-medium leading-tight tracking-tight sm:text-5xl">
-            A track record that predates the fund.
+          <h2 className="max-w-3xl font-display text-4xl font-medium leading-tight tracking-tight sm:text-5xl">
+            Before managing money, we were writing about it — and winning.
           </h2>
           <div className="mt-8 max-w-[620px] space-y-6 font-body text-lg leading-relaxed text-ink-soft">
             <p>
-              Before Linde Equity managed a single dollar, we were publishing
-              stock picks — and getting them right. The Linde Equity Report
-              ran for over two decades, earning multiple #1 rankings from the
-              Hulbert Financial Digest, including best-performing stock
-              newsletter in North America over the preceding decade in 2016.
-            </p>
-            <p>
-              The investment counsel was founded because readers asked us to
-              manage their money directly. Not the other way around.
+              The Linde Equity Report ran for 20 years, serving
+              do-it-yourself investors with independent stock research. It
+              became the benchmark for newsletter performance in North
+              America, earning multiple #1 rankings from the Hulbert
+              Financial Digest. The investment counsel was founded because
+              readers asked us to manage their money directly. Not the other
+              way around.
             </p>
           </div>
+
+          <div className="mt-16 grid gap-12 sm:grid-cols-3 sm:gap-8">
+            {REPORT_STATS.map(({ value, caption }) => (
+              <div key={caption}>
+                <p className="font-display text-6xl font-medium leading-none tracking-tight sm:text-7xl">
+                  {value}
+                </p>
+                <p className="mt-4 font-body text-sm uppercase tracking-[0.15em] text-ink-soft">
+                  {caption}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <p className="mt-12 max-w-[620px] font-body text-sm text-ink-soft">
+            The Linde Equity Report is no longer publishing. Its investment
+            approach forms the foundation of Linde Equity Investment Counsel.
+          </p>
+
           <Link
             href="/our-story"
             className="mt-8 inline-block border-b border-ink pb-1 font-body text-sm tracking-wide transition-opacity hover:opacity-60"
