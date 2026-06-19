@@ -43,6 +43,36 @@ const MANIFESTO = [
   },
 ];
 
+const HOLDINGS = [
+  "Microsoft",
+  "HubSpot",
+  "Monday.com",
+  "Uber",
+  "Aritzia",
+  "Kura Sushi",
+];
+
+const TAKES = [
+  {
+    type: "Podcast",
+    title: "Why we still believe in active management",
+    date: "May 12, 2026",
+    author: "Teal Linde",
+  },
+  {
+    type: "Writing",
+    title: "AI agents and the companies building them",
+    date: "April 28, 2026",
+    author: "Emily Davies",
+  },
+  {
+    type: "Podcast",
+    title: "What the market is missing right now",
+    date: "April 9, 2026",
+    author: "Teal Linde",
+  },
+];
+
 export default function Home() {
   return (
     <>
@@ -96,6 +126,23 @@ export default function Home() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Holdings */}
+      <section className="border-t border-ink-line bg-paper-dim">
+        <div className="mx-auto max-w-6xl px-6 py-25 sm:px-10">
+          <h2 className="max-w-2xl font-display text-4xl font-medium leading-tight tracking-tight sm:text-5xl">
+            A few of the companies defining what&rsquo;s next.
+          </h2>
+          <ul className="mt-12 grid gap-6 font-body text-lg text-ink-soft sm:grid-cols-3 sm:gap-x-12 sm:gap-y-8">
+            {HOLDINGS.map((name) => (
+              <li key={name}>{name}</li>
+            ))}
+          </ul>
+          <p className="mt-12 font-body text-sm text-ink-soft">
+            A selection of current holdings. Not a complete list.
+          </p>
         </div>
       </section>
 
@@ -180,21 +227,36 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Insights Tease */}
+      {/* Takes Feed */}
       <section className="border-t border-ink-line">
         <div className="mx-auto max-w-6xl px-6 py-24 sm:px-10 sm:py-36">
-          <h2 className="max-w-2xl font-display text-4xl font-medium leading-tight tracking-tight sm:text-5xl">
-            Notes on markets, companies, and what we&rsquo;re watching.
+          <h2 className="font-display text-4xl font-medium leading-tight tracking-tight sm:text-5xl">
+            Takes
           </h2>
-          <p className="mt-8 max-w-[480px] font-body text-lg leading-relaxed text-ink-soft">
-            Writing and conversation from Teal Linde and Emily Davies —
-            candid perspectives on the ideas shaping how we invest.
-          </p>
+          <div className="mt-12 grid gap-10 sm:grid-cols-3 sm:gap-8">
+            {TAKES.map(({ type, title, date, author }) => (
+              <Link
+                key={title}
+                href="/takes"
+                className="block border-t border-ink-line pt-6 transition-opacity hover:opacity-70"
+              >
+                <p className="font-body text-xs uppercase tracking-[0.2em] text-ink-soft">
+                  {type}
+                </p>
+                <p className="mt-4 font-display text-2xl font-medium leading-snug tracking-tight">
+                  {title}
+                </p>
+                <p className="mt-4 font-body text-sm text-ink-soft">
+                  {author} &middot; {date}
+                </p>
+              </Link>
+            ))}
+          </div>
           <Link
-            href="/insights"
-            className="mt-8 inline-block border-b border-ink pb-1 font-body text-sm tracking-wide transition-opacity hover:opacity-60"
+            href="/takes"
+            className="mt-12 inline-block border-b border-ink pb-1 font-body text-sm tracking-wide transition-opacity hover:opacity-60"
           >
-            Read Insights &rarr;
+            Read all takes &rarr;
           </Link>
         </div>
       </section>

@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import PlaceholderPage from "@/components/PlaceholderPage";
 
 export const metadata: Metadata = {
-  title: "Insights — Linde Equity",
+  title: "Takes — Linde Equity",
 };
 
-export default function InsightsPage() {
+export default function TakesPage() {
   return (
     <PlaceholderPage
-      title="Insights"
+      title="Takes"
       intro="Podcast episodes and writing from Teal Linde and Emily Davies — filterable by type and author, with an RSS feed."
     />
   );

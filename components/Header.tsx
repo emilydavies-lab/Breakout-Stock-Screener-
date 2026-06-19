@@ -5,7 +5,7 @@ const NAV_LINKS = [
   { href: "/performance", label: "Performance" },
   { href: "/linde-access", label: "Linde Access" },
   { href: "/team", label: "Team" },
-  { href: "/insights", label: "Insights" },
+  { href: "/takes", label: "Takes" },
   { href: "/contact", label: "Contact" },
 ];
 
