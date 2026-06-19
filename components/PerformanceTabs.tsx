@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 
 const TABS = ["Highlights", "Returns", "Composition", "Positions"] as const;
 type Tab = (typeof TABS)[number];
@@ -34,8 +35,18 @@ const FUND_BENEFITS = [
   },
   {
     label: "Minimum investment",
-    description:
-      "$1,000,000 household minimum. Linde Access available from $250,000.",
+    description: (
+      <>
+        $1,000,000 household minimum. Are you a Millennial or Gen Z investor
+        looking for institutional grade investing with a lower minimum?{" "}
+        <Link
+          href="/linde-access"
+          className="border-b border-ink-soft pb-0.5 text-ink transition-opacity hover:opacity-60"
+        >
+          Explore Linde Access
+        </Link>
+      </>
+    ),
   },
 ];
 
@@ -70,17 +81,18 @@ const SECTOR_BREAKDOWN = [
 ];
 
 const GEOGRAPHY_BREAKDOWN = [
-  { region: "North America", value: "[placeholder]%" },
-  { region: "International", value: "[placeholder]%" },
+  { region: "Canada", value: "[placeholder]%" },
+  { region: "United States", value: "[placeholder]%" },
+  { region: "Overseas", value: "[placeholder]%" },
 ];
 
 const POSITIONS = [
-  { company: "Microsoft", ticker: "MSFT", sector: "Information Technology", geography: "North America" },
-  { company: "HubSpot", ticker: "HUBS", sector: "Information Technology", geography: "North America" },
-  { company: "Monday.com", ticker: "MNDY", sector: "Information Technology", geography: "North America" },
-  { company: "Uber", ticker: "UBER", sector: "Consumer Discretionary", geography: "North America" },
+  { company: "Microsoft", ticker: "MSFT", sector: "Information Technology", geography: "United States" },
+  { company: "HubSpot", ticker: "HUBS", sector: "Information Technology", geography: "United States" },
+  { company: "Monday.com", ticker: "MNDY", sector: "Information Technology", geography: "United States" },
+  { company: "Uber", ticker: "UBER", sector: "Consumer Discretionary", geography: "United States" },
   { company: "Aritzia", ticker: "ATZ", sector: "Consumer Discretionary", geography: "Canada" },
-  { company: "Kura Sushi", ticker: "KRUS", sector: "Consumer Discretionary", geography: "North America" },
+  { company: "Kura Sushi", ticker: "KRUS", sector: "Consumer Discretionary", geography: "United States" },
 ];
 
 export default function PerformanceTabs() {
@@ -176,78 +188,71 @@ export default function PerformanceTabs() {
       )}
 
       {activeTab === "Returns" && (
-        <>
-          {/* Returns — Annual */}
-          <section className="border-t border-ink-line bg-paper-dim">
-            <div className="mx-auto max-w-6xl px-6 py-24 sm:px-10 sm:py-32">
-              <h2 className="font-display text-4xl font-medium leading-tight tracking-tight sm:text-5xl">
-                Annual Returns
-              </h2>
-              <p className="mt-4 font-body text-sm uppercase tracking-[0.2em] text-ink-soft">
-                After fees. As of March 31, 2026.
-              </p>
-              <div className="mt-12 overflow-x-auto">
-                <table className="w-full min-w-[640px] border-collapse font-body">
-                  <thead>
-                    <tr className="border-b border-ink-line text-left">
-                      {ANNUAL_RETURNS.map(({ year }) => (
-                        <th
-                          key={year}
-                          className="py-3 pr-8 font-body text-sm font-normal uppercase tracking-[0.1em] text-ink-soft"
-                        >
-                          {year}
-                        </th>
-                      ))}
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      {ANNUAL_RETURNS.map(({ year, value }) => (
-                        <td
-                          key={year}
-                          className="py-5 pr-8 font-display text-2xl font-medium tracking-tight sm:text-3xl"
-                        >
-                          {value}
-                        </td>
-                      ))}
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </section>
+        <section className="border-t border-ink-line bg-paper-dim">
+          <div className="mx-auto max-w-6xl px-6 py-24 sm:px-10 sm:py-32">
+            <h2 className="font-display text-4xl font-medium leading-tight tracking-tight sm:text-5xl">
+              Fund Returns
+            </h2>
+            <p className="mt-4 font-body text-sm uppercase tracking-[0.2em] text-ink-soft">
+              After fees. As of March 31, 2026.
+            </p>
 
-          {/* Returns — Annualized */}
-          <section className="border-t border-ink-line bg-paper">
-            <div className="mx-auto max-w-6xl px-6 py-24 sm:px-10 sm:py-32">
-              <h2 className="font-display text-4xl font-medium leading-tight tracking-tight sm:text-5xl">
-                Annualized Returns
-              </h2>
-              <p className="mt-4 font-body text-sm uppercase tracking-[0.2em] text-ink-soft">
-                After fees. As of March 31, 2026.
-              </p>
-              <table className="mt-12 w-full max-w-2xl border-collapse font-body">
+            <h3 className="mt-16 font-display text-2xl font-medium tracking-tight">
+              Annual Returns
+            </h3>
+            <div className="mt-8 overflow-x-auto">
+              <table className="w-full min-w-[640px] border-collapse font-body">
+                <thead>
+                  <tr className="border-b border-ink-line text-left">
+                    {ANNUAL_RETURNS.map(({ year }) => (
+                      <th
+                        key={year}
+                        className="py-3 pr-8 font-body text-sm font-normal uppercase tracking-[0.1em] text-ink-soft"
+                      >
+                        {year}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
                 <tbody>
-                  {ANNUALIZED_RETURNS.map(({ period, value }) => (
-                    <tr key={period} className="border-b border-ink-line">
-                      <td className="py-4 font-body text-base text-ink-soft">
-                        {period}
-                      </td>
-                      <td className="py-4 text-right font-display text-2xl font-medium tracking-tight">
+                  <tr>
+                    {ANNUAL_RETURNS.map(({ year, value }) => (
+                      <td
+                        key={year}
+                        className="py-5 pr-8 font-display text-2xl font-medium tracking-tight sm:text-3xl"
+                      >
                         {value}
                       </td>
-                    </tr>
-                  ))}
+                    ))}
+                  </tr>
                 </tbody>
               </table>
-
-              <p className="mt-12 font-body text-sm text-ink-soft">
-                Past performance does not guarantee future results. Returns
-                are shown after management fees.
-              </p>
             </div>
-          </section>
-        </>
+
+            <h3 className="mt-16 font-display text-2xl font-medium tracking-tight">
+              Annualized Returns
+            </h3>
+            <table className="mt-8 w-full max-w-2xl border-collapse font-body">
+              <tbody>
+                {ANNUALIZED_RETURNS.map(({ period, value }) => (
+                  <tr key={period} className="border-b border-ink-line">
+                    <td className="py-4 font-body text-base text-ink-soft">
+                      {period}
+                    </td>
+                    <td className="py-4 text-right font-display text-2xl font-medium tracking-tight">
+                      {value}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+
+            <p className="mt-12 font-body text-sm text-ink-soft">
+              Past performance does not guarantee future results. Returns are
+              shown after management fees.
+            </p>
+          </div>
+        </section>
       )}
 
       {activeTab === "Composition" && (
