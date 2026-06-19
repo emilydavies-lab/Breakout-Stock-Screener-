@@ -214,38 +214,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Performance Tease */}
-      <section className="border-t border-ink-line">
-        <div className="mx-auto grid max-w-6xl gap-12 px-6 py-24 sm:px-10 sm:py-32 lg:grid-cols-[1.2fr_1fr] lg:items-center lg:gap-16">
-          <div>
-            <p className="font-display text-[7rem] font-medium leading-none tracking-tight sm:text-[8rem]">
-              +10.0%
-            </p>
-            <p className="mt-4 font-body text-xs uppercase tracking-[0.2em] text-ink-soft">
-              Annualized since inception, October 2016
-            </p>
-          </div>
-          <div>
-            <h2 className="font-display text-4xl font-medium leading-tight tracking-tight sm:text-[2.5rem]">
-              A consistent track record, built over time.
-            </h2>
-            <p className="mt-6 font-body text-lg leading-relaxed text-ink-soft">
-              Through bull markets and bear markets, through volatility and
-              uncertainty — a disciplined approach that compounds over the
-              long term.
-            </p>
-            <Link
-              href="/performance"
-              className="mt-8 inline-block border-b border-ink pb-1 font-body text-sm tracking-wide transition-opacity hover:opacity-60"
-            >
-              View Performance &rarr;
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* Track Record Callout */}
-      <section className="border-t border-ink-line bg-paper-dim">
+      <section className="border-t border-ink-line">
         <div className="mx-auto max-w-6xl px-6 py-25 sm:px-10">
           <h2 className="max-w-3xl font-display text-4xl font-medium leading-tight tracking-tight sm:text-5xl">
             Before managing money, we were writing about it — and winning.
@@ -289,31 +259,38 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Team Intro */}
-      <section className="border-t border-ink-line">
-        <div className="mx-auto grid max-w-6xl gap-8 px-6 py-24 sm:px-10 sm:py-32 lg:grid-cols-12 lg:gap-16">
-          <h2 className="font-display text-4xl font-medium leading-tight tracking-tight sm:text-[2.5rem] lg:col-span-5">
-            Two generations. <em className="italic">One set of values.</em>
-          </h2>
-          <div className="lg:col-span-6 lg:col-start-7 lg:pt-20">
-            <p className="font-body text-lg leading-relaxed text-ink-soft">
-              Teal and Emily bring different perspectives to every investment
-              decision — and the same unwavering commitment to integrity,
-              transparency and trust. It&rsquo;s not a policy. It&rsquo;s how
-              they work.
+      {/* Performance Tease */}
+      <section className="border-t border-ink-line bg-paper-dim">
+        <div className="mx-auto grid max-w-6xl gap-12 px-6 py-24 sm:px-10 sm:py-32 lg:grid-cols-[1.2fr_1fr] lg:items-center lg:gap-16">
+          <div>
+            <p className="font-display text-[7rem] font-medium leading-none tracking-tight sm:text-[8rem]">
+              +10.0%
+            </p>
+            <p className="mt-4 font-body text-xs uppercase tracking-[0.2em] text-ink-soft">
+              Annualized since inception, October 2016
+            </p>
+          </div>
+          <div>
+            <h2 className="font-display text-4xl font-medium leading-tight tracking-tight sm:text-[2.5rem]">
+              A consistent track record, built over time.
+            </h2>
+            <p className="mt-6 font-body text-lg leading-relaxed text-ink-soft">
+              Through bull markets and bear markets, through volatility and
+              uncertainty — a disciplined approach that compounds over the
+              long term.
             </p>
             <Link
-              href="/team"
+              href="/performance"
               className="mt-8 inline-block border-b border-ink pb-1 font-body text-sm tracking-wide transition-opacity hover:opacity-60"
             >
-              Meet the Team &rarr;
+              View Performance &rarr;
             </Link>
           </div>
         </div>
       </section>
 
       {/* Contact CTA */}
-      <section className="border-t border-ink-line bg-paper-dim">
+      <section className="border-t border-ink-line">
         <div className="mx-auto max-w-6xl px-6 py-24 sm:px-10 sm:py-36">
           <h2 className="max-w-2xl font-display text-4xl font-medium leading-tight tracking-tight sm:text-5xl">
             Let&rsquo;s talk about where your portfolio goes from here.
