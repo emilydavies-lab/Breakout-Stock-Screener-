@@ -1,236 +1,218 @@
 import Link from "next/link";
-import { Target, Globe, Layers, Telescope } from "lucide-react";
+import FundBand from "@/components/FundBand";
 
-const MANIFESTO = [
+const INSIGHTS = [
   {
-    icon: Target,
-    body: (
-      <>
-        We look for businesses with superior business models, high returns
-        on invested capital, and markets large enough to sustain exceptional
-        growth.
-      </>
-    ),
+    date: "06.04.2026",
+    title: "SpaceX IPO and Why We're Not Participating (Yet)",
+    subtitle: "Featuring Teal Linde & Emily Davies",
   },
   {
-    icon: Globe,
-    body: (
-      <>
-        We go anywhere. No geographic constraints. No sector bias. Just
-        conviction.
-      </>
-    ),
+    date: "06.01.2026",
+    title: "Chart of the Month",
+    subtitle: "SaaS Valuations and the Growth Disconnect",
   },
   {
-    icon: Layers,
-    body: (
-      <>
-        We run one concentrated fund of 30 to 40 of our best ideas, balanced
-        by Canada&rsquo;s strongest dividend growers to manage risk and
-        reduce volatility.
-      </>
-    ),
+    date: "05.19.2026",
+    title: "Our Investment in e.l.f. Beauty",
+    subtitle: "Partnering with e.l.f. and why Rhode is critical to our thesis",
+  },
+];
+
+const WHO_WE_WORK_WITH = [
+  {
+    type: "Physicians",
+    description:
+      "managing wealth through personal and professional accounts.",
+    href: "/for-physicians",
   },
   {
-    icon: Telescope,
-    body: (
-      <>
-        And we stay curious — always looking at what&rsquo;s emerging,
-        what&rsquo;s being built, and where the next exceptional opportunity
-        is coming from.
-      </>
-    ),
+    type: "Business Owners and Entrepreneurs",
+    description: "ready to grow their wealth beyond the business.",
+    href: "/for-business-owners",
   },
+  {
+    type: "Executives, Lawyers and Accountants",
+    description: "who expect considered analysis and radical transparency.",
+    href: "/for-professionals",
+  },
+];
+
+const STRATEGY_POINTS = [
+  "Superior business models, high returns on invested capital, and large total addressable markets.",
+  "Position sizing of 1.5% to 7% per holding.",
+  "A concentrated portfolio of 30 to 40 ideas.",
+  "Market capitalizations from $500M to $1T+.",
+  "Founder-led teams with meaningful insider ownership.",
+  "No geographic or sector constraints — we go anywhere.",
+  "Relentlessly curious about what's emerging, and what's next.",
 ];
 
 const HOLDINGS = [
   { name: "Microsoft", domain: "microsoft.com" },
-  { name: "HubSpot", domain: "hubspot.com" },
-  { name: "Monday.com", domain: "monday.com" },
-  { name: "Uber", domain: "uber.com" },
   { name: "Aritzia", domain: "aritzia.com" },
-  { name: "Kura Sushi", domain: "kurasushi.com" },
-];
-
-const REPORT_STATS = [
-  { value: "20 Years", caption: "May 2000 to May 2020" },
-  { value: "240", caption: "Stock recommendations" },
-  { value: "24%", caption: "Annualized average return" },
-];
-
-const TAKES = [
-  {
-    type: "Writing",
-    title: "SpaceX IPO and why we aren't participating",
-    date: "May 12, 2026",
-    author: "Teal Linde",
-  },
-  {
-    type: "Writing",
-    title: "AI agents and the companies building them",
-    date: "April 28, 2026",
-    author: "Emily Davies",
-  },
-  {
-    type: "Podcast",
-    title: "What the market is missing right now",
-    date: "April 9, 2026",
-    author: "Teal Linde",
-  },
+  { name: "Blue Owl", domain: "blueowl.com" },
+  { name: "Uber", domain: "uber.com" },
+  { name: "HubSpot", domain: "hubspot.com" },
 ];
 
 export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="mx-auto max-w-6xl px-6 py-28 sm:px-10 sm:py-36">
-        <h1 className="max-w-[820px] font-display text-6xl font-medium leading-[1.1] tracking-tight sm:text-7xl">
-          Over two decades investing in <em className="font-normal italic">exceptional companies</em> built to grow.
-        </h1>
-        <p className="mt-6 max-w-[820px] font-display text-3xl font-medium leading-tight tracking-tight sm:text-4xl">
-          Expanding access to innovation.
-        </p>
-        <p className="mt-10 max-w-[480px] font-body text-lg leading-relaxed text-ink-soft sm:ml-auto sm:text-xl">
-          One fund. Our best ideas — unconstrained by geography, sector, or
-          convention. Relentlessly curious about what comes next.
-        </p>
+      <section className="bg-paper">
+        <div className="mx-auto max-w-6xl px-6 py-28 sm:px-10 sm:py-36">
+          <div className="flex flex-col gap-10 sm:flex-row sm:items-start sm:justify-between">
+            <h1 className="max-w-[600px] font-display text-6xl font-medium leading-[1.1] tracking-tight sm:text-7xl">
+              Over two decades investing in exceptional companies built to
+              grow.
+            </h1>
+            <p className="max-w-[400px] font-body text-[15px] leading-relaxed text-ink-soft sm:mt-4">
+              One fund. Our best ideas. Unconstrained by geography, sector, or
+              convention. Expanding access to investing in innovation with
+              responsible risk management.
+            </p>
+          </div>
+        </div>
       </section>
 
-      {/* Takes Feed */}
-      <section className="border-t border-ink-line bg-paper-dim">
-        <div className="mx-auto max-w-6xl px-6 py-30 sm:px-10">
+      <FundBand />
+
+      {/* Insights */}
+      <section className="bg-paper-dim">
+        <div className="mx-auto max-w-6xl px-6 py-24 sm:px-10 sm:py-32">
           <h2 className="font-display text-5xl font-medium leading-tight tracking-tight sm:text-6xl">
-            Takes
+            Insights
           </h2>
-          <div className="mt-12 grid gap-10 sm:grid-cols-3 sm:gap-8">
-            {TAKES.map(({ type, title, date, author }) => (
+          <div className="mt-12 border-t border-ink-line">
+            {INSIGHTS.map(({ date, title, subtitle }) => (
               <Link
                 key={title}
-                href="/takes"
-                className="block border-t border-ink pt-6 transition-opacity hover:opacity-70"
+                href="/insights"
+                className="grid gap-6 border-b border-ink-line py-10 transition-opacity hover:opacity-70 sm:grid-cols-12 sm:items-center sm:gap-8"
               >
-                <p className="font-body text-xs uppercase tracking-[0.2em] text-ink-soft">
-                  {type}
-                </p>
-                <p className="mt-4 font-display text-2xl font-medium leading-snug tracking-tight">
-                  {title}
-                </p>
-                <p className="mt-4 font-body text-sm text-ink-soft">
-                  {author} &middot; {date}
-                </p>
+                <div className="aspect-[4/3] w-full bg-ink-line sm:col-span-3" />
+                <div className="sm:col-span-9">
+                  <p className="font-mono text-sm text-ink-soft">{date}</p>
+                  <p className="mt-3 font-display text-2xl font-medium leading-snug tracking-tight">
+                    {title}
+                  </p>
+                  <p className="mt-2 font-body text-sm text-ink-soft">
+                    &middot; {subtitle}
+                  </p>
+                  <p className="mt-4 font-mono text-sm text-ink-soft">
+                    {"-------- "}Learn More
+                  </p>
+                </div>
               </Link>
             ))}
           </div>
           <Link
-            href="/takes"
+            href="/insights"
             className="mt-12 inline-block border-b border-ink pb-1 font-body text-sm tracking-wide transition-opacity hover:opacity-60"
           >
-            Read all takes &rarr;
+            View More Insights &rarr;
           </Link>
         </div>
       </section>
 
-      {/* Who It's For */}
-      <section id="who-its-for" className="border-t border-ink-line bg-paper-clay">
-        <div className="mx-auto grid max-w-6xl gap-8 px-6 py-24 sm:px-10 sm:py-32 lg:grid-cols-12 lg:items-start lg:gap-16">
-          <h2 className="font-display text-4xl font-medium leading-tight tracking-tight sm:text-[2.5rem] lg:col-span-5">
-            For investors who have much to protect and more to build.
-          </h2>
-          <div className="lg:col-span-6 lg:col-start-7">
-            <p className="font-body text-lg leading-relaxed text-ink-soft">
-              Whether you&rsquo;ve built a business, a practice, or a career —
-              you want your wealth managed with the same rigour and
-              intentionality you brought to earning it. Linde Equity brings
-              institutional-grade thinking to established investors who expect
-              more from their money.
-            </p>
-            <div className="mt-10 flex flex-col gap-6">
-              <Link
-                href="/for-physicians"
-                className="font-body text-base tracking-wide transition-opacity hover:opacity-60"
-              >
-                Physicians &rarr;
-              </Link>
-              <Link
-                href="/for-business-owners"
-                className="font-body text-base tracking-wide transition-opacity hover:opacity-60"
-              >
-                Business Owners &amp; Entrepreneurs &rarr;
-              </Link>
-              <Link
-                href="/for-professionals"
-                className="font-body text-base tracking-wide transition-opacity hover:opacity-60"
-              >
-                Lawyers, Executives &amp; Accountants &rarr;
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      <FundBand />
 
-      {/* How We Invest */}
-      <section className="border-t border-ink-line">
-        <div className="mx-auto max-w-6xl px-6 py-24 sm:px-10 sm:py-36">
-          <h2 className="font-display text-4xl font-medium leading-tight tracking-tight sm:text-5xl">
-            How we invest.
+      {/* Who We Work With */}
+      <section className="bg-paper">
+        <div className="mx-auto max-w-6xl px-6 py-24 sm:px-10 sm:py-32">
+          <h2 className="font-display text-5xl font-medium leading-tight tracking-tight sm:text-6xl">
+            Who We Work With
           </h2>
-          <div className="mt-16 grid gap-x-20 gap-y-15 sm:grid-cols-2">
-            {MANIFESTO.map(({ icon: Icon, body }, index) => (
-              <div key={index}>
-                <Icon
-                  className="h-7 w-7 text-ink-soft"
-                  strokeWidth={1.5}
-                  aria-hidden="true"
-                />
-                <p className="mt-6 font-body text-lg leading-relaxed text-ink-soft">
-                  {body}
+          <p className="mt-6 max-w-xl font-body text-lg leading-relaxed text-ink-soft">
+            For investors who want their wealth managed with the same
+            intentionality it took to build.
+          </p>
+          <div className="mt-12 border-t border-ink-line">
+            {WHO_WE_WORK_WITH.map(({ type, description, href }) => (
+              <Link
+                key={type}
+                href={href}
+                className="flex items-center justify-between gap-6 border-b border-ink-line py-8 transition-opacity hover:opacity-70"
+              >
+                <p className="font-body text-lg leading-relaxed">
+                  <span className="font-semibold underline">{type}</span>{" "}
+                  <span className="text-ink-soft">{description}</span>
                 </p>
-              </div>
+                <span className="font-body text-lg">&rarr;</span>
+              </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Holdings */}
-      <section className="border-t border-ink-line bg-paper-dim">
-        <div className="mx-auto max-w-6xl px-6 py-25 sm:px-10">
-          <h2 className="max-w-2xl font-display text-4xl font-medium leading-tight tracking-tight sm:text-5xl">
-            A few of the companies we own defining what&rsquo;s next.
+      {/* Our Strategy */}
+      <section className="bg-paper-dim">
+        <div className="mx-auto max-w-6xl px-6 py-24 sm:px-10 sm:py-32">
+          <h2 className="font-display text-5xl font-medium leading-tight tracking-tight sm:text-6xl">
+            Our Strategy
           </h2>
-          <div className="mt-12 grid grid-cols-2 items-center gap-x-8 gap-y-10 sm:flex sm:flex-row sm:items-center sm:justify-between sm:gap-x-10">
+          <p className="mt-6 max-w-2xl font-body text-xl leading-relaxed text-ink-soft">
+            Investing in innovation through public markets with responsible
+            risk management.
+          </p>
+          <ul className="mt-12 space-y-4 font-mono text-base text-ink">
+            {STRATEGY_POINTS.map((point) => (
+              <li key={point}>{"// "}{point}</li>
+            ))}
+          </ul>
+          <Link
+            href="/philosophy"
+            className="mt-12 inline-block border-b border-ink pb-1 font-body text-sm tracking-wide transition-opacity hover:opacity-60"
+          >
+            Learn More about the structural benefits of investing in the
+            Linde Equity Fund. &rarr;
+          </Link>
+        </div>
+      </section>
+
+      {/* Our Portfolio */}
+      <section className="bg-paper">
+        <div className="mx-auto max-w-6xl px-6 py-24 sm:px-10 sm:py-32">
+          <h2 className="font-display text-5xl font-medium leading-tight tracking-tight sm:text-6xl">
+            Our Portfolio
+          </h2>
+          <p className="mt-6 max-w-xl font-body text-lg leading-relaxed text-ink-soft">
+            A few of the companies we own, defining what&rsquo;s next.
+          </p>
+          <div className="mt-12 flex flex-wrap items-center gap-x-12 gap-y-8">
             {HOLDINGS.map(({ name, domain }) => (
               <img
                 key={domain}
                 src={`https://logo.clearbit.com/${domain}`}
                 alt={name}
-                className="h-10 w-auto object-contain grayscale"
+                className="h-10 w-auto object-contain"
                 style={{ filter: "grayscale(100%)" }}
               />
             ))}
           </div>
-          <p className="mt-12 font-body text-sm text-ink-soft">
-            A selection of current holdings. Not a complete list.
-          </p>
+          <Link
+            href="/contact"
+            className="mt-12 inline-block border-b border-ink pb-1 font-body text-sm tracking-wide transition-opacity hover:opacity-60"
+          >
+            Contact Us for the full list of companies &rarr;
+          </Link>
         </div>
       </section>
 
-      {/* Performance Tease */}
-      <section className="border-t border-ink-line">
+      {/* The Linde Equity Fund */}
+      <section className="bg-paper-dim">
         <div className="mx-auto max-w-6xl px-6 py-24 sm:px-10 sm:py-32">
-          <h2 className="font-display text-4xl font-medium leading-tight tracking-tight sm:text-5xl">
-            Linde Equity&rsquo;s unique approach
+          <h2 className="font-display text-5xl font-medium leading-tight tracking-tight sm:text-6xl">
+            The Linde Equity Fund <em className="italic">unique approach</em>
           </h2>
           <p className="mt-8 max-w-2xl font-body text-xl leading-relaxed text-ink-soft">
-            Investing in innovation through public markets with responsible
-            risk management.
-          </p>
-          <h3 className="mt-12 font-display text-2xl font-medium tracking-tight sm:text-3xl">
             A consistent track record, built over time.
-          </h3>
+          </p>
           <p className="mt-6 max-w-2xl font-body text-lg leading-relaxed text-ink-soft">
-            +10.0% annualized since inception. Through bull markets and bear
-            markets, through volatility and uncertainty — a disciplined
-            approach that compounds over the long term.
+            Through bull markets and bear markets, through volatility and
+            uncertainty. We follow a disciplined approach that compounds
+            wealth over the long term.
           </p>
           <Link
             href="/performance"
@@ -241,65 +223,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Track Record Callout */}
-      <section className="border-t border-ink-line bg-paper-dim">
-        <div className="mx-auto max-w-6xl px-6 py-25 sm:px-10">
-          <h2 className="max-w-3xl font-display text-4xl font-medium leading-tight tracking-tight sm:text-5xl">
-            Before managing money, we were writing about it — and winning.
-          </h2>
-          <div className="mt-8 space-y-6 font-body text-lg leading-relaxed text-ink-soft">
-            <p>
-              The Linde Equity Report ran for 20 years, serving DIY investors
-              with independent stock research. It earned multiple #1
-              rankings from the Hulbert Financial Digest and was recognized
-              by The Vancouver Sun, CNBC, BNN, CBS Radio, and The Wall Street
-              Journal. The attention it generated brought investors to our
-              door — asking us to manage their money directly. Not the
-              other way around.
-            </p>
-          </div>
-
-          <div className="mt-16 grid gap-12 sm:grid-cols-3 sm:gap-8">
-            {REPORT_STATS.map(({ value, caption }) => (
-              <div key={caption}>
-                <p className="font-display text-6xl font-medium leading-none tracking-tight sm:text-7xl">
-                  {value}
-                </p>
-                <p className="mt-4 font-body text-sm uppercase tracking-[0.15em] text-ink-soft">
-                  {caption}
-                </p>
-              </div>
-            ))}
-          </div>
-
-          <p className="mt-12 max-w-[620px] font-body text-sm text-ink-soft">
-            The Linde Equity Report is no longer publishing. Its investment
-            approach forms the foundation of Linde Equity.
-          </p>
-
-          <Link
-            href="/our-story"
-            className="mt-8 inline-block border-b border-ink pb-1 font-body text-sm tracking-wide transition-opacity hover:opacity-60"
-          >
-            Read our story &rarr;
-          </Link>
-        </div>
-      </section>
-
-      {/* Contact CTA */}
-      <section className="border-t border-ink-line">
-        <div className="mx-auto max-w-6xl px-6 py-24 sm:px-10 sm:py-36">
-          <h2 className="max-w-2xl font-display text-4xl font-medium leading-tight tracking-tight sm:text-5xl">
-            Let&rsquo;s talk about where your portfolio goes from here.
-          </h2>
-          <Link
-            href="/contact"
-            className="mt-8 inline-block border-b border-ink pb-1 font-body text-sm tracking-wide transition-opacity hover:opacity-60"
-          >
-            Get in Touch &rarr;
-          </Link>
-        </div>
-      </section>
+      <FundBand />
     </>
   );
 }

@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Inter } from "next/font/google";
+import { Cormorant_Garamond, Inter, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import FundBand from "@/components/FundBand";
 
 const canela = Cormorant_Garamond({
   variable: "--font-canela",
@@ -15,10 +16,16 @@ const sohne = Inter({
   subsets: ["latin"],
 });
 
+const monoAccent = IBM_Plex_Mono({
+  variable: "--font-mono-accent",
+  subsets: ["latin"],
+  weight: ["400", "500"],
+});
+
 export const metadata: Metadata = {
   title: "Linde Equity",
   description:
-    "Since 2000, investing in exceptional companies built to grow. Independent, concentrated, conviction-driven investment management.",
+    "Over two decades investing in exceptional companies built to grow. Independent, concentrated, conviction-driven investment management.",
 };
 
 export default function RootLayout({
@@ -27,10 +34,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${canela.variable} ${sohne.variable} h-full`}>
+    <html
+      lang="en"
+      className={`${canela.variable} ${sohne.variable} ${monoAccent.variable} h-full`}
+    >
       <body className="flex min-h-full flex-col font-body antialiased">
         <Header />
         <main className="flex-1">{children}</main>
+        <FundBand />
         <Footer />
       </body>
     </html>
