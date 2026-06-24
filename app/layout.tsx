@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FundBand from "@/components/FundBand";
+import AnnouncementBanner from "@/components/AnnouncementBanner";
 
 const canela = Cormorant_Garamond({
   variable: "--font-canela",
@@ -39,6 +40,7 @@ export default function RootLayout({
       className={`${canela.variable} ${sohne.variable} ${monoAccent.variable} h-full`}
     >
       <body className="flex min-h-full flex-col font-body antialiased">
+        <AnnouncementBanner />
         <Header />
         <main className="flex-1">{children}</main>
         <FundBand />

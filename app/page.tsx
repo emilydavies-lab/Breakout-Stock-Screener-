@@ -39,21 +39,22 @@ const WHO_WE_WORK_WITH = [
 ];
 
 const STRATEGY_POINTS = [
-  "Superior business models, high returns on invested capital, and large total addressable markets.",
-  "Position sizing of 1.5% to 7% per holding.",
-  "A concentrated portfolio of 30 to 40 ideas.",
-  "Market capitalizations from $500M to $1T+.",
-  "Founder-led teams with meaningful insider ownership.",
-  "No geographic or sector constraints — we go anywhere.",
-  "Relentlessly curious about what's emerging, and what's next.",
+  "Superior business models, high returns on invested capital and large, untapped TAMs (total addressable markets).",
+  "Position sizing: 1.5% to 7%, scaled to risk and conviction.",
+  "Concentration: One concentrated fund of 30 to 40 of our best ideas.",
+  "Market capitalization: Companies ranging from $500M to $1 trillion+.",
+  "Founder-led teams with insider ownership are prioritized. Recent insider purchases get our attention.",
+  "Geography and sector: Anywhere and everywhere.",
+  "Relentlessly curious. Always looking at what's emerging, what's being built, and where the next exceptional opportunity might be.",
 ];
 
 const HOLDINGS = [
   { name: "Microsoft", domain: "microsoft.com" },
-  { name: "Aritzia", domain: "aritzia.com" },
-  { name: "Blue Owl", domain: "blueowl.com" },
-  { name: "Uber", domain: "uber.com" },
   { name: "HubSpot", domain: "hubspot.com" },
+  { name: "Monday.com", domain: "monday.com" },
+  { name: "Uber", domain: "uber.com" },
+  { name: "Aritzia", domain: "aritzia.com" },
+  { name: "Kura Sushi", domain: "kurasushi.com" },
 ];
 
 export default function Home() {
@@ -67,7 +68,7 @@ export default function Home() {
               Over two decades investing in exceptional companies built to
               grow.
             </h1>
-            <p className="max-w-[400px] font-body text-[15px] leading-relaxed text-ink-soft sm:mt-4">
+            <p className="max-w-[400px] font-body text-[15px] leading-relaxed text-ink-soft sm:mt-24">
               One fund. Our best ideas. Unconstrained by geography, sector, or
               convention. Expanding access to investing in innovation with
               responsible risk management.
@@ -80,7 +81,7 @@ export default function Home() {
 
       {/* Insights */}
       <section className="bg-paper-dim">
-        <div className="mx-auto max-w-6xl px-6 py-24 sm:px-10 sm:py-32">
+        <div className="mx-auto max-w-4xl px-6 py-24 sm:px-10 sm:py-32">
           <h2 className="font-display text-5xl font-medium leading-tight tracking-tight sm:text-6xl">
             Insights
           </h2>
@@ -209,7 +210,7 @@ export default function Home() {
           <p className="mt-8 max-w-2xl font-body text-xl leading-relaxed text-ink-soft">
             A consistent track record, built over time.
           </p>
-          <p className="mt-6 max-w-2xl font-body text-lg leading-relaxed text-ink-soft">
+          <p className="mt-6 font-body text-lg leading-relaxed text-ink-soft">
             Through bull markets and bear markets, through volatility and
             uncertainty. We follow a disciplined approach that compounds
             wealth over the long term.
@@ -222,8 +223,6 @@ export default function Home() {
           </Link>
         </div>
       </section>
-
-      <FundBand />
     </>
   );
 }
