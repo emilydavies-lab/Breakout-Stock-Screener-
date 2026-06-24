@@ -68,11 +68,13 @@ export default function Home() {
               Over two decades investing in exceptional companies built to
               grow.
             </h1>
-            <p className="max-w-[400px] font-body text-[15px] leading-relaxed text-ink-soft sm:mt-24">
-              One fund. Our best ideas. Unconstrained by geography, sector, or
-              convention. Expanding access to investing in innovation with
-              responsible risk management.
-            </p>
+            <div className="max-w-[400px] sm:pt-[130px]">
+              <p className="text-right font-body text-[15px] leading-relaxed text-ink-soft">
+                One fund. Our best ideas. Unconstrained by geography, sector,
+                or convention. Expanding access to investing in innovation
+                with responsible risk management.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -85,7 +87,7 @@ export default function Home() {
           <h2 className="font-display text-5xl font-medium leading-tight tracking-tight sm:text-6xl">
             Insights
           </h2>
-          <div className="mt-12 border-t border-ink-line">
+          <div className="mt-6 border-t border-ink-line">
             {INSIGHTS.map(({ date, title, subtitle }) => (
               <Link
                 key={title}
@@ -117,7 +119,10 @@ export default function Home() {
         </div>
       </section>
 
-      <FundBand />
+      {/* Linde Equity Fund callout (boxed) */}
+      <section className="bg-paper py-16 sm:py-20">
+        <FundBand variant="boxed" />
+      </section>
 
       {/* Who We Work With */}
       <section className="bg-paper">
@@ -129,21 +134,19 @@ export default function Home() {
             For investors who want their wealth managed with the same
             intentionality it took to build.
           </p>
-          <div className="mt-12 border-t border-ink-line">
+          <ul className="mt-8 max-w-2xl space-y-2 font-body text-base leading-relaxed text-ink-soft">
             {WHO_WE_WORK_WITH.map(({ type, description, href }) => (
-              <Link
-                key={type}
-                href={href}
-                className="flex items-center justify-between gap-6 border-b border-ink-line py-8 transition-opacity hover:opacity-70"
-              >
-                <p className="font-body text-lg leading-relaxed">
-                  <span className="font-semibold underline">{type}</span>{" "}
-                  <span className="text-ink-soft">{description}</span>
-                </p>
-                <span className="font-body text-lg">&rarr;</span>
-              </Link>
+              <li key={type}>
+                <Link
+                  href={href}
+                  className="transition-opacity hover:opacity-60"
+                >
+                  <span className="font-medium text-ink">{type}</span>{" "}
+                  {description}
+                </Link>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </section>
 

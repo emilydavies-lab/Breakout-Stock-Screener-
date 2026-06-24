@@ -3,8 +3,29 @@ import Link from "next/link";
 export default function FundBand({
   variant = "default",
 }: {
-  variant?: "default" | "cta";
+  variant?: "default" | "cta" | "boxed";
 }) {
+  if (variant === "boxed") {
+    return (
+      <div className="mx-auto max-w-[900px] px-6 sm:px-10">
+        <div className="flex flex-col gap-4 bg-ink px-6 py-8 sm:flex-row sm:items-center sm:justify-between sm:px-10">
+          <p className="font-mono text-sm font-medium uppercase tracking-[0.1em] text-white">
+            Linde Equity Fund
+          </p>
+          <p className="font-mono text-sm text-white/60">
+            Learn more about investing in the Fund
+          </p>
+          <Link
+            href="/performance"
+            className="inline-flex items-center justify-center rounded-full border border-white px-6 py-2 font-body text-sm text-white transition-opacity hover:opacity-70"
+          >
+            Explore the Linde Equity Fund &rarr;
+          </Link>
+        </div>
+      </div>
+    );
+  }
+
   if (variant === "cta") {
     return (
       <section className="bg-ink">
