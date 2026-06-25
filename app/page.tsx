@@ -89,7 +89,7 @@ export default function Home() {
 
       {/* Insights */}
       <section className="bg-paper-dim">
-        <div className="mx-auto max-w-4xl px-6 py-10 sm:px-10 sm:py-12">
+        <div className="mx-auto max-w-6xl px-6 py-10 sm:px-10 sm:py-12">
           <h2 className="font-display text-5xl font-medium leading-tight tracking-tight sm:text-6xl">
             Insights
           </h2>
