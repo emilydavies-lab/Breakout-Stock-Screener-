@@ -84,7 +84,7 @@ export default function PhilosophyPage() {
       </section>
 
       {/* The thinking behind it */}
-      <section className="border-t border-ink-line bg-[#EEEEEE]">
+      <section className="border-t border-ink-line bg-[#FFFFFF]">
         <div className="mx-auto max-w-6xl px-6 pt-[62px] pb-[62px] sm:px-10 sm:pt-[84px] sm:pb-[84px]">
           <h2 className="font-display text-4xl font-medium leading-tight tracking-tight sm:text-5xl">
             The thinking behind it.
