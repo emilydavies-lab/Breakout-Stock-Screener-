@@ -51,7 +51,7 @@ export default function PhilosophyPage() {
   return (
     <>
       {/* Title */}
-      <section className="mx-auto max-w-6xl px-6 py-28 sm:px-10 sm:py-36">
+      <section className="mx-auto max-w-6xl px-6 pt-[62px] pb-[62px] sm:px-10 sm:pt-[84px] sm:pb-[84px]">
         <p className="font-body text-xs uppercase tracking-[0.2em] text-ink-soft">
           How we think about investing
         </p>
@@ -62,7 +62,7 @@ export default function PhilosophyPage() {
 
       {/* Manifesto */}
       <section className="border-t border-ink-line bg-paper-dim">
-        <div className="mx-auto max-w-6xl px-6 py-24 sm:px-10 sm:py-36">
+        <div className="mx-auto max-w-6xl px-6 pt-[62px] pb-[62px] sm:px-10 sm:pt-[84px] sm:pb-[84px]">
           <h2 className="font-display text-4xl font-medium leading-tight tracking-tight sm:text-5xl">
             How we invest.
           </h2>
@@ -85,7 +85,7 @@ export default function PhilosophyPage() {
 
       {/* The Approach */}
       <section className="border-t border-ink-line">
-        <div className="mx-auto max-w-6xl px-6 py-24 sm:px-10 sm:py-36">
+        <div className="mx-auto max-w-6xl px-6 pt-[62px] pb-[62px] sm:px-10 sm:pt-[84px] sm:pb-[84px]">
           <h2 className="font-display text-4xl font-medium leading-tight tracking-tight sm:text-5xl">
             The Approach
           </h2>
@@ -141,7 +141,7 @@ export default function PhilosophyPage() {
 
       {/* 2009 case study */}
       <section className="border-t border-ink-line bg-paper-dim">
-        <div className="mx-auto max-w-6xl px-6 py-24 sm:px-10 sm:py-36">
+        <div className="mx-auto max-w-6xl px-6 pt-[62px] pb-[62px] sm:px-10 sm:pt-[84px] sm:pb-[84px]">
           <aside className="max-w-[680px] border-l-2 border-ink pl-8">
             <p className="font-body text-xs uppercase tracking-[0.2em] text-ink-soft">
               2009: a case study
