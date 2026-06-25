@@ -54,10 +54,8 @@ const STRATEGY_POINTS = [
 const HOLDINGS = [
   { name: "Microsoft", logo: "/images/logos/microsoft.png" },
   { name: "HubSpot", logo: "/images/logos/hubspot.png" },
-  { name: "Monday.com", domain: "monday.com" },
   { name: "Uber", logo: "/images/logos/uber.png" },
   { name: "Aritzia", logo: "/images/logos/aritzia.png" },
-  { name: "Kura Sushi", domain: "kurasushi.com" },
   { name: "Blue Owl", logo: "/images/logos/blue-owl.png" },
 ];
 
@@ -66,13 +64,13 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="bg-paper">
-        <div className="mx-auto max-w-6xl px-6 py-28 sm:px-10 sm:py-36">
+        <div className="mx-auto max-w-6xl px-6 py-28 sm:px-10 sm:py-44">
           <div className="flex flex-col gap-10 sm:flex-row sm:items-start sm:justify-between">
             <h1 className="max-w-[600px] font-display text-6xl font-medium leading-[1.1] tracking-tight sm:text-7xl">
               Over two decades investing in exceptional companies built to
               grow.
             </h1>
-            <div className="max-w-[400px] sm:pt-[130px]">
+            <div className="max-w-[400px] sm:pt-[220px]">
               <p className="text-right font-body text-[15px] leading-relaxed text-ink-soft">
                 One fund. Our best ideas. Unconstrained by geography, sector,
                 or convention. Expanding access to investing in innovation
@@ -91,16 +89,16 @@ export default function Home() {
 
       {/* Insights */}
       <section className="bg-paper-dim">
-        <div className="mx-auto max-w-4xl px-6 py-24 sm:px-10 sm:py-32">
+        <div className="mx-auto max-w-4xl px-6 py-16 sm:px-10 sm:py-20">
           <h2 className="font-display text-5xl font-medium leading-tight tracking-tight sm:text-6xl">
             Insights
           </h2>
-          <div className="mt-6 border-t border-ink-line">
+          <div className="mt-4 border-t border-ink-line">
             {INSIGHTS.map(({ date, title, subtitle, image }) => (
               <Link
                 key={title}
                 href="/insights"
-                className="grid gap-6 border-b border-ink-line py-10 transition-opacity hover:opacity-70 sm:grid-cols-12 sm:items-center sm:gap-8"
+                className="grid gap-6 border-b border-ink-line py-6 transition-opacity hover:opacity-70 sm:grid-cols-12 sm:items-center sm:gap-8"
               >
                 <img
                   src={image}
@@ -128,13 +126,6 @@ export default function Home() {
           >
             View More Insights &rarr;
           </Link>
-        </div>
-      </section>
-
-      {/* Linde Equity Fund callout */}
-      <section className="bg-paper">
-        <div className="mx-auto max-w-6xl px-6 py-16 sm:px-10 sm:py-20">
-          <FundBand />
         </div>
       </section>
 
@@ -199,10 +190,10 @@ export default function Home() {
             A few of the companies we own, defining what&rsquo;s next.
           </p>
           <div className="mt-12 flex flex-wrap items-center gap-x-12 gap-y-8">
-            {HOLDINGS.map(({ name, logo, domain }) => (
+            {HOLDINGS.map(({ name, logo }) => (
               <img
                 key={name}
-                src={logo ?? `https://logo.clearbit.com/${domain}`}
+                src={logo}
                 alt={name}
                 className="h-10 w-auto object-contain"
                 style={{ filter: "grayscale(100%)" }}
