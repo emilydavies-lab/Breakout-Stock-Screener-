@@ -80,7 +80,9 @@ export default function Home() {
       </section>
 
       <section className="bg-paper">
-        <FundBand />
+        <div className="mx-auto max-w-6xl px-6 py-16 sm:px-10 sm:py-20">
+          <FundBand />
+        </div>
       </section>
 
       {/* Insights */}
@@ -123,7 +125,9 @@ export default function Home() {
 
       {/* Linde Equity Fund callout */}
       <section className="bg-paper">
-        <FundBand />
+        <div className="mx-auto max-w-6xl px-6 py-16 sm:px-10 sm:py-20">
+          <FundBand />
+        </div>
       </section>
 
       {/* Who We Work With */}

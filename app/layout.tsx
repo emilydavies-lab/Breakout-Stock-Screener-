@@ -43,7 +43,9 @@ export default function RootLayout({
         <AnnouncementBanner />
         <Header />
         <main className="flex-1">{children}</main>
-        <FundBand />
+        <div className="mx-auto w-full max-w-6xl px-6 py-16 sm:px-10 sm:py-20">
+          <FundBand />
+        </div>
         <Footer />
       </body>
     </html>
