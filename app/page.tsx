@@ -6,16 +6,19 @@ const INSIGHTS = [
     date: "06.04.2026",
     title: "SpaceX IPO and Why We're Not Participating (Yet)",
     subtitle: "Featuring Teal Linde & Emily Davies",
+    image: "/images/spacex.jpg",
   },
   {
     date: "06.01.2026",
     title: "Chart of the Month",
     subtitle: "SaaS Valuations and the Growth Disconnect",
+    image: "/images/chart-of-the-month.png",
   },
   {
     date: "05.19.2026",
     title: "Our Investment in e.l.f. Beauty",
     subtitle: "Partnering with e.l.f. and why Rhode is critical to our thesis",
+    image: "/images/rhode.png",
   },
 ];
 
@@ -92,13 +95,17 @@ export default function Home() {
             Insights
           </h2>
           <div className="mt-6 border-t border-ink-line">
-            {INSIGHTS.map(({ date, title, subtitle }) => (
+            {INSIGHTS.map(({ date, title, subtitle, image }) => (
               <Link
                 key={title}
                 href="/insights"
                 className="grid gap-6 border-b border-ink-line py-10 transition-opacity hover:opacity-70 sm:grid-cols-12 sm:items-center sm:gap-8"
               >
-                <div className="aspect-[4/3] w-full bg-ink-line sm:col-span-3" />
+                <img
+                  src={image}
+                  alt={title}
+                  className="aspect-[4/3] w-full object-cover sm:col-span-3"
+                />
                 <div className="sm:col-span-9">
                   <p className="font-mono text-sm text-ink-soft">{date}</p>
                   <p className="mt-3 font-display text-2xl font-medium leading-snug tracking-tight">
