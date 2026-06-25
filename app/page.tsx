@@ -82,30 +82,30 @@ export default function Home() {
       </section>
 
       <section className="bg-paper">
-        <div className="mx-auto max-w-6xl px-6 py-16 sm:px-10 sm:py-20">
+        <div className="mx-auto max-w-6xl px-6 pt-16 pb-7 sm:px-10 sm:pt-20 sm:pb-8">
           <FundBand />
         </div>
       </section>
 
       {/* Insights */}
       <section className="bg-paper-dim">
-        <div className="mx-auto max-w-4xl px-6 py-16 sm:px-10 sm:py-20">
+        <div className="mx-auto max-w-4xl px-6 py-10 sm:px-10 sm:py-12">
           <h2 className="font-display text-5xl font-medium leading-tight tracking-tight sm:text-6xl">
             Insights
           </h2>
-          <div className="mt-4 border-t border-ink-line">
+          <div className="mt-3 border-t border-ink-line">
             {INSIGHTS.map(({ date, title, subtitle, image }) => (
               <Link
                 key={title}
                 href="/insights"
-                className="grid gap-6 border-b border-ink-line py-6 transition-opacity hover:opacity-70 sm:grid-cols-12 sm:items-center sm:gap-8"
+                className="grid gap-6 border-b border-ink-line py-4 transition-opacity hover:opacity-70 sm:grid-cols-12 sm:items-center sm:gap-8"
               >
                 <img
                   src={image}
                   alt={title}
-                  className="aspect-[4/3] w-full object-cover sm:col-span-3"
+                  className="aspect-square w-full object-cover sm:col-span-5"
                 />
-                <div className="sm:col-span-9">
+                <div className="sm:col-span-7">
                   <p className="font-mono text-sm text-ink-soft">{date}</p>
                   <p className="mt-3 font-display text-2xl font-medium leading-snug tracking-tight">
                     {title}
