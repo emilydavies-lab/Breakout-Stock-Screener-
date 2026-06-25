@@ -70,7 +70,7 @@ export default function Home() {
               Over two decades investing in exceptional companies built to
               grow.
             </h1>
-            <div className="max-w-[400px] sm:pt-[260px]">
+            <div className="max-w-[400px] sm:pt-[350px]">
               <p className="text-right font-body text-[15px] leading-relaxed text-ink-soft">
                 One fund. Our best ideas. Unconstrained by geography, sector,
                 or convention. Expanding access to investing in innovation
@@ -144,10 +144,11 @@ export default function Home() {
               <li key={type}>
                 <Link
                   href={href}
-                  className="transition-opacity hover:opacity-60"
+                  className="inline-block border-b border-transparent text-ink-soft transition-colors hover:border-ink-soft hover:text-ink"
                 >
                   <span className="font-medium text-ink">{type}</span>{" "}
-                  {description}
+                  {description}{" "}
+                  <span className="text-ink-soft">&rarr;</span>
                 </Link>
               </li>
             ))}
