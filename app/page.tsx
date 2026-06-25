@@ -103,9 +103,9 @@ export default function Home() {
                 <img
                   src={image}
                   alt={title}
-                  className="aspect-square w-full object-cover sm:col-span-5"
+                  className="aspect-[4/3] w-full object-cover sm:col-span-3"
                 />
-                <div className="sm:col-span-7">
+                <div className="sm:col-span-9">
                   <p className="font-mono text-sm text-ink-soft">{date}</p>
                   <p className="mt-3 font-display text-2xl font-medium leading-snug tracking-tight">
                     {title}
@@ -189,7 +189,7 @@ export default function Home() {
           <p className="mt-6 max-w-xl font-body text-lg leading-relaxed text-ink-soft">
             A few of the companies we own, defining what&rsquo;s next.
           </p>
-          <div className="mt-12 flex flex-wrap items-center gap-x-12 gap-y-8">
+          <div className="mt-12 flex flex-wrap items-center justify-between gap-y-8">
             {HOLDINGS.map(({ name, logo }) => (
               <img
                 key={name}
