@@ -64,7 +64,7 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="bg-paper">
-        <div className="mx-auto flex max-w-6xl flex-col px-6 pt-16 pb-16 sm:px-10 sm:pt-20 sm:pb-20">
+        <div className="mx-auto flex max-w-6xl flex-col px-6 pt-16 pb-[62px] sm:px-10 sm:pt-20 sm:pb-[84px]">
           <div className="flex flex-1 flex-col gap-10 sm:flex-row sm:justify-between">
             <h1 className="max-w-[600px] self-start font-display text-6xl font-medium leading-[1.1] tracking-tight sm:text-7xl">
               Over two decades investing in exceptional companies built to
@@ -82,14 +82,14 @@ export default function Home() {
       </section>
 
       <section className="bg-paper">
-        <div className="mx-auto max-w-6xl px-6 pt-16 pb-7 sm:px-10 sm:pt-20 sm:pb-8">
+        <div className="mx-auto max-w-6xl px-6 pt-[62px] pb-[62px] sm:px-10 sm:pt-[84px] sm:pb-[84px]">
           <FundBand />
         </div>
       </section>
 
       {/* Insights */}
       <section className="bg-paper-dim">
-        <div className="mx-auto max-w-6xl px-6 py-10 sm:px-10 sm:py-12">
+        <div className="mx-auto max-w-6xl px-6 pt-[62px] pb-[62px] sm:px-10 sm:pt-[84px] sm:pb-[84px]">
           <h2 className="font-display text-5xl font-medium leading-tight tracking-tight sm:text-6xl">
             Insights
           </h2>
@@ -131,7 +131,7 @@ export default function Home() {
 
       {/* Who We Work With */}
       <section className="bg-paper">
-        <div className="mx-auto max-w-6xl px-6 py-14 sm:px-10 sm:py-20">
+        <div className="mx-auto max-w-6xl px-6 pt-[62px] pb-[62px] sm:px-10 sm:pt-[84px] sm:pb-[84px]">
           <h2 className="font-display text-5xl font-medium leading-tight tracking-tight sm:text-6xl">
             Who We Work With
           </h2>
@@ -160,7 +160,7 @@ export default function Home() {
 
       {/* Our Strategy */}
       <section className="bg-paper-dim">
-        <div className="mx-auto max-w-6xl px-6 py-24 sm:px-10 sm:py-32">
+        <div className="mx-auto max-w-6xl px-6 pt-[62px] pb-[62px] sm:px-10 sm:pt-[84px] sm:pb-[84px]">
           <h2 className="font-display text-5xl font-medium leading-tight tracking-tight sm:text-6xl">
             Our Strategy
           </h2>
@@ -185,7 +185,7 @@ export default function Home() {
 
       {/* Our Portfolio */}
       <section className="bg-paper">
-        <div className="mx-auto max-w-6xl px-6 py-24 sm:px-10 sm:py-32">
+        <div className="mx-auto max-w-6xl px-6 pt-[62px] pb-[62px] sm:px-10 sm:pt-[84px] sm:pb-[84px]">
           <h2 className="font-display text-5xl font-medium leading-tight tracking-tight sm:text-6xl">
             Our Portfolio
           </h2>
@@ -214,7 +214,7 @@ export default function Home() {
 
       {/* The Linde Equity Fund */}
       <section className="bg-paper-dim">
-        <div className="mx-auto max-w-6xl px-6 py-24 sm:px-10 sm:py-32">
+        <div className="mx-auto max-w-6xl px-6 pt-[62px] pb-[62px] sm:px-10 sm:pt-[84px] sm:pb-[84px]">
           <h2 className="font-display text-5xl font-medium leading-tight tracking-tight sm:text-6xl">
             The Linde Equity Fund <em className="italic">unique approach</em>
           </h2>
