@@ -108,7 +108,7 @@ export default function Home() {
                     &middot; {subtitle}
                   </p>
                   <p className="mt-4 font-mono text-sm text-ink-soft">
-                    {"-------- "}Learn More
+                    {"——→ "}Learn More
                   </p>
                 </div>
               </Link>
