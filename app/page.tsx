@@ -64,7 +64,7 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="bg-paper">
-        <div className="mx-auto flex min-h-[600px] max-w-6xl flex-col px-6 py-16 sm:h-[80vh] sm:px-10 sm:py-20">
+        <div className="mx-auto flex min-h-[420px] max-w-6xl flex-col px-6 pt-16 pb-6 sm:h-[45vh] sm:px-10 sm:pt-20 sm:pb-8">
           <div className="flex flex-1 flex-col gap-10 sm:flex-row sm:justify-between">
             <h1 className="max-w-[600px] self-start font-display text-6xl font-medium leading-[1.1] tracking-tight sm:text-7xl">
               Over two decades investing in exceptional companies built to
@@ -82,7 +82,7 @@ export default function Home() {
       </section>
 
       <section className="bg-paper">
-        <div className="mx-auto max-w-6xl px-6 pt-16 pb-7 sm:px-10 sm:pt-20 sm:pb-8">
+        <div className="mx-auto max-w-6xl px-6 pt-8 pb-7 sm:px-10 sm:pt-10 sm:pb-8">
           <FundBand />
         </div>
       </section>
