@@ -64,13 +64,13 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="bg-paper">
-        <div className="mx-auto max-w-6xl px-6 py-16 sm:px-10 sm:py-20">
-          <div className="flex flex-col gap-10 sm:flex-row sm:items-start sm:justify-between">
-            <h1 className="max-w-[600px] font-display text-6xl font-medium leading-[1.1] tracking-tight sm:text-7xl">
+        <div className="mx-auto flex min-h-[600px] max-w-6xl flex-col px-6 py-16 sm:h-[80vh] sm:px-10 sm:py-20">
+          <div className="flex flex-1 flex-col gap-10 sm:flex-row sm:justify-between">
+            <h1 className="max-w-[600px] self-start font-display text-6xl font-medium leading-[1.1] tracking-tight sm:text-7xl">
               Over two decades investing in exceptional companies built to
               grow.
             </h1>
-            <div className="max-w-[400px] sm:pt-[350px]">
+            <div className="max-w-[400px] self-end">
               <p className="text-right font-body text-[15px] leading-relaxed text-ink-soft">
                 One fund. Our best ideas. Unconstrained by geography, sector,
                 or convention. Expanding access to investing in innovation
