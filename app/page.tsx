@@ -71,7 +71,7 @@ export default function Home() {
               grow.
             </h1>
             <div className="max-w-[400px] self-end">
-              <p className="text-right font-body text-[15px] leading-relaxed text-ink-soft">
+              <p className="mt-20 text-right font-body text-[15px] leading-relaxed text-ink-soft sm:mt-24">
                 One fund. Our best ideas. Unconstrained by geography, sector,
                 or convention. Expanding access to investing in innovation
                 with responsible risk management.
@@ -139,15 +139,17 @@ export default function Home() {
             For investors who want their wealth managed with the same
             intentionality it took to build.
           </p>
-          <ul className="mt-8 max-w-2xl space-y-2 font-body text-base leading-relaxed text-ink-soft">
+          <ul className="mt-8 border-t border-ink-line font-body text-base leading-relaxed text-ink-soft">
             {WHO_WE_WORK_WITH.map(({ type, description, href }) => (
-              <li key={type}>
+              <li key={type} className="border-b border-ink-line">
                 <Link
                   href={href}
-                  className="inline-block border-b border-transparent text-ink-soft transition-colors hover:border-ink-soft hover:text-ink"
+                  className="flex items-center justify-between gap-6 py-6 text-ink-soft transition-colors hover:text-ink"
                 >
-                  <span className="font-medium text-ink">{type}</span>{" "}
-                  {description}{" "}
+                  <span>
+                    <span className="font-medium text-ink">{type}</span>{" "}
+                    {description}
+                  </span>
                   <span className="text-ink-soft">&rarr;</span>
                 </Link>
               </li>
