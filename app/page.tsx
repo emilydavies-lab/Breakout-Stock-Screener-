@@ -131,20 +131,20 @@ export default function Home() {
 
       {/* Who We Work With */}
       <section className="bg-paper">
-        <div className="mx-auto max-w-6xl px-6 py-24 sm:px-10 sm:py-32">
+        <div className="mx-auto max-w-6xl px-6 py-14 sm:px-10 sm:py-20">
           <h2 className="font-display text-5xl font-medium leading-tight tracking-tight sm:text-6xl">
             Who We Work With
           </h2>
-          <p className="mt-6 max-w-xl font-body text-lg leading-relaxed text-ink-soft">
+          <p className="mt-3 max-w-xl font-body text-lg leading-relaxed text-ink-soft">
             For investors who want their wealth managed with the same
             intentionality it took to build.
           </p>
-          <ul className="mt-8 border-t border-ink-line font-body text-base leading-relaxed text-ink-soft">
+          <ul className="mt-5 border-t border-ink-line font-body text-base leading-relaxed text-ink-soft">
             {WHO_WE_WORK_WITH.map(({ type, description, href }) => (
               <li key={type} className="border-b border-ink-line">
                 <Link
                   href={href}
-                  className="flex items-center justify-between gap-6 py-6 text-ink-soft transition-colors hover:text-ink"
+                  className="flex items-center justify-between gap-6 py-3 text-ink-soft transition-colors hover:text-ink"
                 >
                   <span>
                     <span className="font-medium text-ink">{type}</span>{" "}
