@@ -79,7 +79,9 @@ export default function Home() {
         </div>
       </section>
 
-      <FundBand />
+      <section className="bg-paper">
+        <FundBand />
+      </section>
 
       {/* Insights */}
       <section className="bg-paper-dim">
@@ -119,9 +121,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Linde Equity Fund callout (boxed) */}
-      <section className="bg-paper py-16 sm:py-20">
-        <FundBand variant="boxed" />
+      {/* Linde Equity Fund callout */}
+      <section className="bg-paper">
+        <FundBand />
       </section>
 
       {/* Who We Work With */}
