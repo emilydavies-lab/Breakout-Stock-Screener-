@@ -52,12 +52,13 @@ const STRATEGY_POINTS = [
 ];
 
 const HOLDINGS = [
-  { name: "Microsoft", domain: "microsoft.com" },
-  { name: "HubSpot", domain: "hubspot.com" },
+  { name: "Microsoft", logo: "/images/logos/microsoft.png" },
+  { name: "HubSpot", logo: "/images/logos/hubspot.png" },
   { name: "Monday.com", domain: "monday.com" },
-  { name: "Uber", domain: "uber.com" },
-  { name: "Aritzia", domain: "aritzia.com" },
+  { name: "Uber", logo: "/images/logos/uber.png" },
+  { name: "Aritzia", logo: "/images/logos/aritzia.png" },
   { name: "Kura Sushi", domain: "kurasushi.com" },
+  { name: "Blue Owl", logo: "/images/logos/blue-owl.png" },
 ];
 
 export default function Home() {
@@ -198,10 +199,10 @@ export default function Home() {
             A few of the companies we own, defining what&rsquo;s next.
           </p>
           <div className="mt-12 flex flex-wrap items-center gap-x-12 gap-y-8">
-            {HOLDINGS.map(({ name, domain }) => (
+            {HOLDINGS.map(({ name, logo, domain }) => (
               <img
-                key={domain}
-                src={`https://logo.clearbit.com/${domain}`}
+                key={name}
+                src={logo ?? `https://logo.clearbit.com/${domain}`}
                 alt={name}
                 className="h-10 w-auto object-contain"
                 style={{ filter: "grayscale(100%)" }}
