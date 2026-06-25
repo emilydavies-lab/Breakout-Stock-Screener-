@@ -20,8 +20,8 @@ const MANIFESTO = [
     icon: Globe,
     body: (
       <>
-        We go anywhere. No geographic constraints. No sector bias.{" "}
-        <em className="font-display italic text-ink">Just conviction.</em>
+        We go anywhere. No geographic constraints. No sector bias. Just
+        conviction.
       </>
     ),
   },
@@ -83,11 +83,11 @@ export default function PhilosophyPage() {
         </div>
       </section>
 
-      {/* The Approach */}
-      <section className="border-t border-ink-line">
+      {/* The thinking behind it */}
+      <section className="border-t border-ink-line bg-[#EEEEEE]">
         <div className="mx-auto max-w-6xl px-6 pt-[62px] pb-[62px] sm:px-10 sm:pt-[84px] sm:pb-[84px]">
           <h2 className="font-display text-4xl font-medium leading-tight tracking-tight sm:text-5xl">
-            The Approach
+            The thinking behind it.
           </h2>
           <div className="mt-12 max-w-[680px] space-y-6 font-body text-lg leading-[1.8] text-ink-soft">
             <p>
@@ -135,27 +135,19 @@ export default function PhilosophyPage() {
               otherwise — that limit most managers before they&rsquo;ve even
               started looking.
             </p>
-          </div>
-        </div>
-      </section>
 
-      {/* 2009 case study */}
-      <section className="border-t border-ink-line bg-paper-dim">
-        <div className="mx-auto max-w-6xl px-6 pt-[62px] pb-[62px] sm:px-10 sm:pt-[84px] sm:pb-[84px]">
-          <aside className="max-w-[680px] border-l-2 border-ink pl-8">
-            <p className="font-body text-xs uppercase tracking-[0.2em] text-ink-soft">
-              2009: a case study
-            </p>
-            <p className="mt-4 font-body text-lg leading-[1.8] text-ink-soft">
-              In January 2009, with markets still reeling, Teal sold client
-              positions that were down 20-40% to buy stocks that were down
-              80-90% — companies with strong balance sheets and heavy insider
-              buying, priced as if the economy was ending. Within 13 months,
-              portfolios following the strategy were back in positive
-              territory. The Linde Equity Report earned its first #1 ranking
-              that same year.
-            </p>
-          </aside>
+            <aside className="ml-0 max-w-[600px] border-l border-ink pl-10 sm:ml-2.5">
+              <p className="font-display text-base italic leading-relaxed text-ink-soft">
+                &ldquo;In January 2009, with markets still reeling, we sold
+                client positions that were down 20-40% to buy stocks that
+                were down 80-90% — companies with strong balance sheets and
+                heavy insider buying, priced as if the economy was ending.
+                Within 13 months, portfolios following the strategy were back
+                in positive territory. The Linde Equity Report earned its
+                first #1 ranking that same year.&rdquo;
+              </p>
+            </aside>
+          </div>
         </div>
       </section>
     </>
