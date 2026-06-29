@@ -135,7 +135,7 @@ export default function Home() {
           <h2 className="font-display text-5xl font-medium leading-tight tracking-tight sm:text-6xl">
             Who We Work With
           </h2>
-          <p className="mt-3 max-w-xl font-body text-lg leading-relaxed text-ink-soft">
+          <p className="mt-6 max-w-xl font-body text-xl leading-relaxed text-ink-soft">
             For investors who want their wealth managed with the same
             intentionality it took to build.
           </p>
@@ -189,7 +189,7 @@ export default function Home() {
           <h2 className="font-display text-5xl font-medium leading-tight tracking-tight sm:text-6xl">
             Our Portfolio
           </h2>
-          <p className="mt-6 max-w-xl font-body text-lg leading-relaxed text-ink-soft">
+          <p className="mt-6 max-w-xl font-body text-xl leading-relaxed text-ink-soft">
             A few of the companies we own, defining what&rsquo;s next.
           </p>
           <div className="mt-12 flex flex-wrap items-center justify-between gap-y-8">
@@ -218,7 +218,7 @@ export default function Home() {
           <h2 className="font-display text-5xl font-medium leading-tight tracking-tight sm:text-6xl">
             The Linde Equity Fund <em className="italic">unique approach</em>
           </h2>
-          <p className="mt-8 max-w-2xl font-body text-xl leading-relaxed text-ink-soft">
+          <p className="mt-6 max-w-2xl font-body text-xl leading-relaxed text-ink-soft">
             A consistent track record, built over time.
           </p>
           <p className="mt-6 font-body text-lg leading-relaxed text-ink-soft">
