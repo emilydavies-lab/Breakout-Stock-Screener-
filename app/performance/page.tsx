@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import PerformanceTabs from "@/components/PerformanceTabs";
+import PerformanceSections from "@/components/PerformanceSections";
 
 export const metadata: Metadata = {
   title: "Performance — Linde Equity",
@@ -37,7 +37,7 @@ export default function PerformancePage() {
         </div>
       </section>
 
-      <PerformanceTabs />
+      <PerformanceSections />
     </>
   );
 }
