@@ -3,7 +3,7 @@ import { Cormorant_Garamond, Inter, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import FundBand from "@/components/FundBand";
+import GlobalFundBand from "@/components/GlobalFundBand";
 import AnnouncementBanner from "@/components/AnnouncementBanner";
 
 const canela = Cormorant_Garamond({
@@ -43,9 +43,7 @@ export default function RootLayout({
         <AnnouncementBanner />
         <Header />
         <main className="flex-1">{children}</main>
-        <div className="mx-auto w-full max-w-6xl px-6 py-16 sm:px-10 sm:py-20">
-          <FundBand />
-        </div>
+        <GlobalFundBand />
         <Footer />
       </body>
     </html>
