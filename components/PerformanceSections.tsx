@@ -231,7 +231,7 @@ export default function PerformanceSections() {
       </section>
 
       {/* SECTION 2: Composition */}
-      <section id="composition" className="bg-paper">
+      <section id="composition" className="bg-paper-dim">
         <div className="mx-auto max-w-6xl px-6 py-24 sm:px-10 sm:py-32">
           <div className="grid gap-16 sm:grid-cols-2">
             {/* Sector bar chart */}
