@@ -185,7 +185,7 @@ export default function PerformanceSections() {
       </section>
 
       {/* Linde Equity Report */}
-      <section className="bg-[#F5EDD8]">
+      <section className="bg-paper">
         <div className="mx-auto max-w-6xl px-6 py-24 sm:px-10 sm:py-32">
           <h3 className="max-w-3xl font-display text-4xl font-medium leading-tight tracking-tight sm:text-5xl">
             Linde Equity Report

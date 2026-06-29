@@ -3,9 +3,9 @@
 import { useEffect, useState } from "react";
 
 const SECTIONS = [
-  { id: "highlights", label: "Highlights" },
   { id: "returns", label: "Returns" },
   { id: "composition", label: "Composition" },
+  { id: "highlights", label: "Highlights" },
 ];
 
 export default function PerformanceNav() {
@@ -38,7 +38,7 @@ export default function PerformanceNav() {
   };
 
   return (
-    <section className="sticky top-0 z-10 border-b border-ink-line bg-paper">
+    <section className="sticky top-0 z-40 border-b border-ink-line bg-paper">
       <div className="mx-auto max-w-6xl px-6 sm:px-10">
         <div className="flex gap-10 overflow-x-auto">
           {SECTIONS.map(({ id, label }) => (
