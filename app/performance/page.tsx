@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import PerformanceNav from "@/components/PerformanceNav";
 import PerformanceSections from "@/components/PerformanceSections";
 
 export const metadata: Metadata = {
@@ -37,6 +38,7 @@ export default function PerformancePage() {
         </div>
       </section>
 
+      <PerformanceNav />
       <PerformanceSections />
     </>
   );

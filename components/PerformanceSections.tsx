@@ -104,7 +104,7 @@ export default function PerformanceSections() {
   return (
     <>
       {/* SECTION 1: Returns */}
-      <section className="bg-paper-dim">
+      <section id="returns" className="bg-paper-dim">
         <div className="mx-auto max-w-6xl px-6 py-24 sm:px-10 sm:py-32">
           <h2 className="font-display text-4xl font-medium leading-tight tracking-tight sm:text-5xl">
             Linde Equity Fund
@@ -185,7 +185,7 @@ export default function PerformanceSections() {
       </section>
 
       {/* Linde Equity Report */}
-      <section className="bg-[#E8E0D5]">
+      <section className="bg-[#F5EDD8]">
         <div className="mx-auto max-w-6xl px-6 py-24 sm:px-10 sm:py-32">
           <h3 className="max-w-3xl font-display text-4xl font-medium leading-tight tracking-tight sm:text-5xl">
             Linde Equity Report
@@ -231,7 +231,7 @@ export default function PerformanceSections() {
       </section>
 
       {/* SECTION 2: Composition */}
-      <section className="bg-paper">
+      <section id="composition" className="bg-paper">
         <div className="mx-auto max-w-6xl px-6 py-24 sm:px-10 sm:py-32">
           <div className="grid gap-16 sm:grid-cols-2">
             {/* Sector bar chart */}
@@ -306,7 +306,7 @@ export default function PerformanceSections() {
       </section>
 
       {/* SECTION 3: Highlights */}
-      <section className="bg-paper-dim">
+      <section id="highlights" className="bg-paper-dim">
         <div className="mx-auto max-w-6xl px-6 py-24 sm:px-10 sm:py-32">
           <h2 className="font-display text-4xl font-medium leading-tight tracking-tight sm:text-5xl">
             Core Benefits
