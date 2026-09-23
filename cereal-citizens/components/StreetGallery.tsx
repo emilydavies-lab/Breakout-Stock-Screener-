@@ -33,7 +33,7 @@ export default function StreetGallery() {
               className="object-cover"
             />
             {i === 0 && (
-              <figcaption className="absolute bottom-6 left-3 origin-bottom-left -rotate-5 font-hand text-[1.3125rem] leading-[1.15] font-medium text-white [text-shadow:0_1px_6px_rgb(0_0_0/0.55)] lg:bottom-[2.25rem] lg:left-[0.6875rem] lg:text-[1.25rem] lg:leading-[1.3125rem]">
+              <figcaption className="absolute bottom-4 left-3 origin-bottom-left -rotate-5 font-hand text-[1.3125rem] leading-[1.15] font-medium text-white [text-shadow:0_1px_6px_rgb(0_0_0/0.55)] lg:bottom-[0.875rem] lg:left-[0.6875rem] lg:text-[1.25rem] lg:leading-[1.3125rem]">
                 Real People.
                 <br />
                 Real Places.

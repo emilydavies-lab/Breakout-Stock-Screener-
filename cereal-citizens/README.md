@@ -33,7 +33,8 @@ Put the files in `public/images/`. The images there now were cut from the Claude
 | `lorne-pops-box.png` | 139 × 189, transparent | Yellow box, product card + cart |
 | `hero-vancouver.jpg` | 1700 × 1127 (≈1.51:1), ChatGPT photo with sky extended | Hero, full-bleed cover. On mobile it's cropped 4:5 and on tablet square, both toward the right |
 | `xl-vancouver.jpg` | 1536 × 1024, ChatGPT photo, cropped by CSS (`object-position` 50% 22%) | XL Boxes, right 66%. 16:10 on mobile |
-| `street-01.jpg` … `street-04.jpg` | ~200 × 285 (≈7:10) | Street gallery |
+| `street-01.jpg` | 1024 × 1536, ChatGPT photo | Street gallery, first column (caption sits on its lower third) |
+| `street-02.jpg` … `street-04.jpg` | ~200 × 285 (≈7:10), cut from the mockup | Street gallery |
 
 The mockup's baked-in text (headline, buttons, nav, annotation, the "Real People" caption) was painted out of the hero and `street-01.jpg`. The site draws that text live on top. Because the source is only 1024px wide, the photos soften on large screens. For sharp results, replace them with high-resolution files that keep the same names and aspect ratios. `npm run placeholders` only creates files that are missing, so it never overwrites real art.
 
