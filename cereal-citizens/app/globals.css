@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #f7f5f0;
+  --color-panel: #f2f0ea;
+  --color-ink: #101010;
+  --color-navy: #071827;
+  --color-title: #0b1a4a;
+  --color-xl: #15191c;
+  --color-marker: #e32929;
+  --color-sky: #e4edf6;
+
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Source Serif 4 Variable", Georgia, serif;
+  --font-condensed: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --font-hand: "Caveat", "Comic Sans MS", cursive;
+}
+
+/*
+ * Desktop scaling: the reference is a 1024px frame. From 1024px up, 1rem is
+ * 1/64 of the viewport (capped at 26px), so every lg: measurement written in
+ * rem (1rem = 16 reference px) keeps the reference proportions.
+ */
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+@media (min-width: 1024px) {
+  html {
+    font-size: min(calc(100vw / 64), 26px);
+  }
+  body {
+    overflow-x: clip;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-navy);
+  outline-offset: 2px;
+}
+.focus-light:focus-visible,
+.focus-light :focus-visible {
+  outline-color: #fff;
+}
+
+.headline {
+  font-family: var(--font-serif);
+  font-weight: 760;
+  font-variation-settings: "opsz" 60;
+  letter-spacing: -0.05em;
+}
