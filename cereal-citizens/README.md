@@ -31,7 +31,7 @@ Put the files in `public/images/`. The images there now were cut from the Claude
 | --- | --- | --- |
 | `rice-ebys-box.png` | 130 × 190, transparent | Blue box, product card + cart |
 | `lorne-pops-box.png` | 139 × 189, transparent | Yellow box, product card + cart |
-| `hero-vancouver.jpg` | 1024 × 679 (≈1.51:1) | Hero, full-bleed cover. On mobile it's cropped 4:5 and on tablet square, both toward the right |
+| `hero-vancouver.jpg` | 1700 × 1127 (≈1.51:1), ChatGPT photo with sky extended | Hero, full-bleed cover. On mobile it's cropped 4:5 and on tablet square, both toward the right |
 | `xl-vancouver.jpg` | 675 × 296 (≈2.28:1) | XL Boxes, right 66%. 16:10 on mobile |
 | `street-01.jpg` … `street-04.jpg` | ~200 × 285 (≈7:10) | Street gallery |
 
