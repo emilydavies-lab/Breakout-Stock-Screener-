@@ -15,7 +15,7 @@ export default function ProductCard({ product, className = "" }: { product: Prod
     <article
       aria-labelledby={titleId}
       data-testid={`product-${product.id}`}
-      className={`flex gap-4 rounded-[10px] bg-panel p-4 sm:gap-5 lg:gap-[1.125rem] lg:rounded-[0.625rem] lg:py-[0.625rem] lg:pr-[0.75rem] lg:pl-[1.5rem] ${className}`}
+      className={`flex gap-4 rounded-[10px] bg-panel p-4 sm:gap-5 lg:gap-[1rem] lg:rounded-[0.625rem] lg:py-[0.4375rem] lg:pr-[0.75rem] lg:pl-[1.1875rem] ${className}`}
     >
       <Image
         src={product.image.src}
@@ -23,9 +23,9 @@ export default function ProductCard({ product, className = "" }: { product: Prod
         height={product.image.height}
         alt={product.image.alt}
         sizes="(min-width: 1024px) 8rem, 9rem"
-        className="h-auto w-[7.5rem] shrink-0 self-center sm:w-[8.5rem] lg:h-[11.5rem] lg:w-auto"
+        className="h-auto w-[7.5rem] shrink-0 self-center sm:w-[8.5rem] lg:h-[11.875rem] lg:w-auto"
       />
-      <div className="flex min-w-0 flex-1 flex-col pt-3 pb-1 lg:pt-[1.4375rem] lg:pb-[0.8125rem]">
+      <div className="flex min-w-0 flex-1 flex-col pt-3 pb-1 lg:pt-[1.625rem] lg:pb-[1rem]">
         <h3 id={titleId} className="text-[1.1875rem] leading-tight font-bold tracking-[-0.01em] text-title lg:text-[1.1875rem] lg:leading-[1.4375rem]">
           {product.name}
         </h3>

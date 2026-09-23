@@ -7,14 +7,14 @@ import sharp from "sharp";
 
 const dir = join(process.cwd(), "public/images");
 const images = [
-  ["rice-ebys-box.png", 800, 1200],
-  ["lorne-pops-box.png", 800, 1200],
-  ["hero-vancouver.jpg", 2400, 1592],
-  ["xl-vancouver.jpg", 2400, 1052],
-  ["street-01.jpg", 800, 1140],
-  ["street-02.jpg", 800, 1140],
-  ["street-03.jpg", 800, 1140],
-  ["street-04.jpg", 800, 1140],
+  ["rice-ebys-box.png", 130, 190],
+  ["lorne-pops-box.png", 139, 189],
+  ["hero-vancouver.jpg", 1024, 679],
+  ["xl-vancouver.jpg", 675, 296],
+  ["street-01.jpg", 197, 285],
+  ["street-02.jpg", 208, 285],
+  ["street-03.jpg", 200, 285],
+  ["street-04.jpg", 195, 285],
 ];
 
 for (const [name, w, h] of images) {

@@ -17,8 +17,8 @@ export const products: Product[] = [
     currency: "CAD",
     image: {
       src: "/images/rice-ebys-box.png",
-      width: 800,
-      height: 1200,
+      width: 130,
+      height: 190,
       alt: "Rice Eby’s limited election edition cereal box, blue packaging",
     },
   },
@@ -30,8 +30,8 @@ export const products: Product[] = [
     currency: "CAD",
     image: {
       src: "/images/lorne-pops-box.png",
-      width: 800,
-      height: 1200,
+      width: 139,
+      height: 189,
       alt: "Lorne Pops limited election edition cereal box, yellow packaging",
     },
   },

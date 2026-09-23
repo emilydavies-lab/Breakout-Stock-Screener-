@@ -66,7 +66,7 @@ export default function Hero() {
           preload
           sizes="100vw"
           quality={85}
-          className="object-cover object-[72%_50%] lg:object-center"
+          className="object-cover object-[80%_50%] lg:object-center"
         />
       </div>
     </section>
