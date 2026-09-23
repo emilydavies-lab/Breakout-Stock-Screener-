@@ -38,7 +38,7 @@ export default function XLBoxesSection() {
           alt="Two people carrying giant Rice Eby's and Lorne Pops XL cereal boxes down Granville Street, beside a Good People, Brighter B.C. sign"
           fill
           sizes="(min-width: 1024px) 66vw, 100vw"
-          className="object-cover"
+          className="object-cover object-[50%_22%]"
         />
       </div>
     </section>
