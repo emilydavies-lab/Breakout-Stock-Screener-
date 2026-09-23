@@ -30,8 +30,8 @@ export const products: Product[] = [
     currency: "CAD",
     image: {
       src: "/images/lorne-pops-box.png",
-      width: 139,
-      height: 189,
+      width: 549,
+      height: 800,
       alt: "Lorne Pops limited election edition cereal box, yellow packaging",
     },
   },

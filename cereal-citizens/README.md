@@ -25,17 +25,17 @@ npm run test:cart                   # add, change qty, remove, subtotal, badge, 
 
 ## Images
 
-Put the files in `public/images/`. The photos and the Rice Eby's box are ChatGPT images. The Lorne Pops box is still cut from the Claude-generated mockup (`reference.png`), at the mockup's resolution:
+Put the files in `public/images/`. All images are ChatGPT images, made to match the Claude-generated mockup (`reference.png`). The originals are 1024–1536px; the box PNGs are trimmed and sized to 2× their largest display size:
 
 | File | Current size | Used for |
 | --- | --- | --- |
 | `rice-ebys-box.png` | 549 × 800, transparent, ChatGPT product shot | Blue box, product card + cart |
-| `lorne-pops-box.png` | 139 × 189, transparent | Yellow box, product card + cart |
+| `lorne-pops-box.png` | 549 × 800, transparent, ChatGPT product shot | Yellow box, product card + cart |
 | `hero-vancouver.jpg` | 1700 × 1127 (≈1.51:1), ChatGPT photo with sky extended | Hero, full-bleed cover. On mobile it's cropped 4:5 and on tablet square, both toward the right |
 | `xl-vancouver.jpg` | 1536 × 1024, ChatGPT photo, cropped by CSS (`object-position` 50% 22%) | XL Boxes, right 66%. 16:10 on mobile |
 | `street-01.jpg` … `street-04.jpg` | 1024 × 1536 each, ChatGPT photos | Street gallery (the caption sits on the lower third of `street-01`) |
 
-The mockup's baked-in text (headline, buttons, nav, annotation, the "Real People" caption) was painted out of the hero and `street-01.jpg`. The site draws that text live on top. Because the source is only 1024px wide, the photos soften on large screens. For sharp results, replace them with high-resolution files that keep the same names and aspect ratios. `npm run placeholders` only creates files that are missing, so it never overwrites real art.
+The hero's sky was extended at the top and sides so the boxes clear the header nav. To replace an image, keep the same filename and roughly the same aspect ratio. `npm run placeholders` only creates files that are missing, so it never overwrites real art.
 
 Box art is finished artwork. Always display it with `width`/`height` from `data/products.ts` and never crop, recolour or stretch it. If the real PNG has a different ratio, update `width`/`height` there. The card fixes the box's height and lets its width follow.
 
