@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { routes } from "@/data/site";
 import Button from "./Button";
 import FeatureIcons from "./FeatureIcons";
 import { MarkerUnderline } from "./HandDrawn";
@@ -28,13 +29,13 @@ export default function Hero() {
         </p>
         <div className="mt-7 flex flex-col items-start gap-3 lg:mt-0 lg:contents">
           <Button
-            href="#collectibles"
+            href={routes.collectibles}
             className="h-12 px-7 text-[0.9375rem] lg:absolute lg:top-[27.5rem] lg:left-[3.125rem] lg:h-[2.5rem] lg:w-[13.6875rem] lg:px-0 lg:text-[0.90625rem]"
           >
             Shop the Collection
           </Button>
           <Button
-            href="#xl-boxes"
+            href={routes.xlBoxes}
             variant="outline"
             className="h-12 px-7 text-[0.9375rem] lg:absolute lg:top-[30.625rem] lg:left-[3.125rem] lg:h-[2.5625rem] lg:w-[11.6875rem] lg:px-0 lg:text-[0.90625rem]"
           >

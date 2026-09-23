@@ -7,6 +7,7 @@ import "@fontsource/caveat/500.css";
 import "@fontsource/caveat/600.css";
 import "./globals.css";
 import { CartProvider } from "@/lib/cart";
+import CartDrawer from "@/components/CartDrawer";
 
 export const metadata: Metadata = {
   title: "Cereal Citizens — Cereal for a Brighter B.C.",
@@ -22,7 +23,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en-CA">
       <body>
-        <CartProvider>{children}</CartProvider>
+        <CartProvider>
+          {children}
+          <CartDrawer />
+        </CartProvider>
       </body>
     </html>
   );

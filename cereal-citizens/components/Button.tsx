@@ -1,5 +1,6 @@
 import type { ComponentProps } from "react";
 import { ArrowIcon } from "./icons";
+import SmartLink from "./SmartLink";
 
 const variants = {
   primary: "bg-navy text-white hover:bg-[#12283b]",
@@ -7,7 +8,8 @@ const variants = {
   light: "bg-white text-ink hover:bg-paper focus-light",
 } as const;
 
-type Props = ComponentProps<"a"> & {
+type Props = Omit<ComponentProps<"a">, "href"> & {
+  href: string;
   variant?: keyof typeof variants;
   arrow?: boolean;
 };
@@ -21,12 +23,12 @@ export default function Button({
   ...props
 }: Props) {
   return (
-    <a
+    <SmartLink
       className={`inline-flex items-center justify-center gap-[0.6em] rounded-full font-medium whitespace-nowrap transition-colors ${variants[variant]} ${className}`}
       {...props}
     >
       <span>{children}</span>
       {arrow && <ArrowIcon className="size-[1.05em] shrink-0" />}
-    </a>
+    </SmartLink>
   );
 }

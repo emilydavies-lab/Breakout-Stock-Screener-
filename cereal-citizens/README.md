@@ -1,6 +1,12 @@
 # Cereal Citizens
 
-*Same politics. A brighter B.C.* This is a one-page shop for limited-edition parody cereal collectibles (Rice Eby's, Lorne Pops) and their XL event boxes.
+*Same politics. A brighter B.C.* This is a small shop for limited-edition parody cereal collectibles (Rice Eby's, Lorne Pops, $35 CAD) and their XL event boxes ($75 CAD).
+
+Pages:
+- `/` is the home page. Its Collectibles section lists the regular boxes.
+- `/xl-boxes` lists the two XL boxes. Both "Shop XL Boxes" buttons link here.
+
+The cart lives in the root layout, so it carries across both pages. The header menu has a single "Shop" link to `/#collectibles`.
 
 It's built with Next.js 16 (App Router), TypeScript and Tailwind CSS v4. Fonts are self-hosted with `@fontsource`, so nothing is fetched from Google at build time. `reference.png` is the 1024 × 1536 design the page is built to match.
 
@@ -56,11 +62,14 @@ Below 1024px the root font size is 16px, and tablet and mobile get their own flo
 ## Structure
 
 ```
-app/            layout (fonts, CartProvider), page, globals.css (tokens + scaling)
+app/            layout (fonts, CartProvider, CartDrawer), page, xl-boxes/page,
+                globals.css (tokens + scaling)
 components/     Header, Logo, Hero, FeatureIcons, CollectiblesSection, ProductCard,
                 QuantitySelector, XLBoxesSection, StreetGallery (+ footer), CartDrawer,
-                Button, HandDrawn (marker underline/circle), icons
-data/           products.ts (catalogue + formatPrice), site.ts (nav, anchors, socials)
+                XLProductsSection, Button, SmartLink (anchor vs next/link),
+                HandDrawn (marker underline/circle), icons
+data/           products.ts (catalogue, kind: collectible | xl, formatPrice),
+                site.ts (routes, nav, anchors, socials)
 lib/            cart.tsx (useReducer + context), checkout.ts (payment hook)
 scripts/        make-placeholders, screenshot, test-cart
 ```

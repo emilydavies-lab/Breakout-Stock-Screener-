@@ -1,9 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { navLinks } from "@/data/site";
+import { navLinks, routes } from "@/data/site";
 import { useCart } from "@/lib/cart";
 import Logo from "./Logo";
+import SmartLink from "./SmartLink";
 import { AccountIcon, CartIcon, CloseIcon, MenuIcon, SearchIcon } from "./icons";
 
 function CartButton({ className = "" }: { className?: string }) {
@@ -26,7 +27,8 @@ function CartButton({ className = "" }: { className?: string }) {
   );
 }
 
-export default function Header() {
+/** `overlay` sits on the home hero photo; `solid` is for pages without one. */
+export default function Header({ variant = "overlay" }: { variant?: "overlay" | "solid" }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -37,7 +39,14 @@ export default function Header() {
   }, [menuOpen]);
 
   return (
-    <header id="top" className="relative z-30 bg-sky lg:absolute lg:inset-x-0 lg:top-0 lg:bg-transparent">
+    <header
+      id="top"
+      className={
+        variant === "overlay"
+          ? "relative z-30 bg-sky lg:absolute lg:inset-x-0 lg:top-0 lg:bg-transparent"
+          : "relative z-30 border-b border-ink/10 bg-paper"
+      }
+    >
       {/* Mobile / tablet bar */}
       <div className="flex items-center justify-between px-5 py-4 md:px-8 lg:hidden">
         <Logo />
@@ -64,37 +73,39 @@ export default function Header() {
             <ul>
               {navLinks.map((link) => (
                 <li key={link.label}>
-                  <a
+                  <SmartLink
                     href={link.href}
                     onClick={() => setMenuOpen(false)}
                     className="block border-b border-ink/10 py-3.5 text-lg font-medium"
                   >
                     {link.label}
-                  </a>
+                  </SmartLink>
                 </li>
               ))}
             </ul>
           </nav>
-          <a
-            href="#collectibles"
+          <SmartLink
+            href={routes.collectibles}
             onClick={() => setMenuOpen(false)}
             className="mt-5 inline-flex h-11 items-center rounded-md bg-navy px-5 text-xs font-bold tracking-wide text-white uppercase"
           >
             A Brighter B.C.
-          </a>
+          </SmartLink>
         </div>
       )}
 
       {/* Desktop, positioned on the 1024 reference grid */}
-      <div className="relative mx-auto hidden h-[5.75rem] w-[64rem] lg:block">
+      <div
+        className={`relative mx-auto hidden w-[64rem] lg:block ${variant === "overlay" ? "h-[5.75rem]" : "h-[6.5rem]"}`}
+      >
         <Logo className="absolute top-[1.125rem] left-[3.125rem]" />
         <nav aria-label="Main" className="absolute top-[1.5rem] left-[21.875rem]">
           <ul className="flex h-[1.5rem] items-center gap-[1.8125rem] text-[0.78125rem] font-medium text-ink">
             {navLinks.map((link) => (
               <li key={link.label}>
-                <a href={link.href} className="hover:underline hover:underline-offset-4">
+                <SmartLink href={link.href} className="hover:underline hover:underline-offset-4">
                   {link.label}
-                </a>
+                </SmartLink>
               </li>
             ))}
           </ul>
@@ -103,17 +114,17 @@ export default function Header() {
           <button type="button" className="grid size-[1.75rem] place-items-center text-ink" aria-label="Search">
             <SearchIcon className="size-[1.1875rem]" />
           </button>
-          <a href="#top" className="grid size-[1.75rem] place-items-center text-ink" aria-label="Account">
+          <SmartLink href="/" className="grid size-[1.75rem] place-items-center text-ink" aria-label="Account">
             <AccountIcon className="size-[1.1875rem]" />
-          </a>
+          </SmartLink>
           <CartButton className="size-[1.75rem]" />
         </div>
-        <a
-          href="#collectibles"
+        <SmartLink
+          href={routes.collectibles}
           className="absolute top-[1.125rem] left-[53.625rem] grid h-[2.125rem] w-[7.625rem] place-items-center rounded-[0.375rem] bg-navy text-[0.6875rem] font-bold tracking-[0.01em] whitespace-nowrap text-white uppercase hover:bg-[#12283b]"
         >
           A Brighter B.C.
-        </a>
+        </SmartLink>
       </div>
     </header>
   );

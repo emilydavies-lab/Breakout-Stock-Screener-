@@ -74,13 +74,39 @@ await dialog.getByText("Your bowl is empty.").waitFor();
 assert.equal(await badge.textContent(), "0");
 step("remove last → empty state, badge 0");
 
-// Anchors
+// Anchors and the XL Boxes page
 await page.keyboard.press("Escape");
-for (const [name, id] of [["Shop the Collection", "collectibles"], ["Shop XL Boxes", "xl-boxes"]]) {
-  await page.getByRole("link", { name }).first().click();
-  await page.waitForFunction((id) => location.hash === `#${id}`, id);
-}
-step("hero CTAs link to #collectibles and #xl-boxes");
+await page.getByRole("link", { name: "Shop the Collection" }).first().click();
+await page.waitForFunction(() => location.hash === "#collectibles");
+step("Shop the Collection scrolls to #collectibles");
+
+await page.getByTestId("product-rice-ebys").getByRole("button", { name: "Add to Cart" }).click();
+await dialog.waitFor();
+await page.keyboard.press("Escape");
+await page.getByRole("link", { name: "Shop XL Boxes" }).first().click();
+await page.waitForURL("**/xl-boxes");
+await page.getByRole("heading", { level: 1, name: "XL Boxes" }).waitFor();
+assert.equal(await badge.textContent(), "1", "cart survives the page change");
+step("Shop XL Boxes opens /xl-boxes and keeps the cart");
+
+const xl = page.getByTestId("product-lorne-pops-xl");
+assert.equal(await xl.getByText("$75 CAD").count(), 1);
+await xl.getByRole("button", { name: /Increase quantity/ }).click();
+await xl.getByRole("button", { name: "Add to Cart" }).click();
+await dialog.waitFor();
+assert.equal(await badge.textContent(), "3");
+assert.equal(await page.getByTestId("cart-subtotal").textContent(), "$185 CAD");
+step("add 2 Lorne Pops XL at $75 → badge 3, subtotal $185");
+
+await page.keyboard.press("Escape");
+await page.getByRole("link", { name: "Shop" }).first().click();
+await page.waitForURL((url) => url.pathname === "/" && url.hash === "#collectibles");
+assert.equal(await badge.textContent(), "3");
+step("header Shop link returns to the collection with the cart intact");
+
+const navLabels = await page.locator('nav[aria-label="Main"]').last().getByRole("link").allTextContents();
+assert.deepEqual(navLabels, ["Shop"]);
+step("menu only shows Shop");
 
 await browser.close();
 console.log("All cart checks passed.");

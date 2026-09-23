@@ -6,6 +6,8 @@ import { formatPrice, getProduct } from "@/data/products";
 import { useCart } from "@/lib/cart";
 import { startCheckout } from "@/lib/checkout";
 import QuantitySelector from "./QuantitySelector";
+import SmartLink from "./SmartLink";
+import { routes } from "@/data/site";
 import { CloseIcon } from "./icons";
 
 export default function CartDrawer() {
@@ -95,13 +97,13 @@ export default function CartDrawer() {
         {lines.length === 0 ? (
           <div className="flex flex-1 flex-col items-start px-6 py-10">
             <p className="font-hand text-[2rem] leading-none font-medium">Your bowl is empty.</p>
-            <a
-              href="#collectibles"
+            <SmartLink
+              href={routes.collectibles}
               onClick={closeCart}
               className="mt-5 text-sm font-medium underline underline-offset-4"
             >
               Back to the collection
-            </a>
+            </SmartLink>
           </div>
         ) : (
           <>

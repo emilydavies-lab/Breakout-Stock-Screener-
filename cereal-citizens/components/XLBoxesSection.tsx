@@ -1,7 +1,15 @@
 import Image from "next/image";
+import { routes } from "@/data/site";
 import Button from "./Button";
 
-export default function XLBoxesSection() {
+type Props = {
+  /** h1 on the XL Boxes page, h2 on the home page. */
+  as?: "h1" | "h2";
+  /** Show the "Shop XL Boxes" button (home page only). */
+  showCta?: boolean;
+};
+
+export default function XLBoxesSection({ as: Heading = "h2", showCta = true }: Props) {
   return (
     <section
       id="xl-boxes"
@@ -12,24 +20,26 @@ export default function XLBoxesSection() {
         <p className="text-[0.625rem] leading-none font-semibold tracking-[0.17em] uppercase lg:text-[0.59375rem] lg:leading-[0.75rem]">
           Make a Bigger Statement
         </p>
-        <h2
+        <Heading
           id="xl-title"
           className="mt-3 font-condensed text-[4.75rem] leading-[0.8] font-bold uppercase md:text-[5.5rem] lg:mt-[0.75rem] lg:text-[5rem]"
         >
           XL Boxes
-        </h2>
+        </Heading>
         <p className="mt-5 max-w-[24rem] text-[0.9375rem] leading-[1.45] text-white/85 lg:mt-[1.375rem] lg:max-w-none lg:text-[0.9rem] lg:leading-[1.3125rem]">
           Our oversized cereal boxes are perfect for
           <br className="hidden sm:inline" /> rallies, events, markets, photo ops and
           <br className="hidden sm:inline" /> guerrilla marketing in your town.
         </p>
-        <Button
-          href="#xl-boxes"
-          variant="light"
-          className="mt-7 h-12 px-7 text-[0.9375rem] lg:mt-[1.3125rem] lg:h-[2.5rem] lg:w-[11.75rem] lg:px-0 lg:text-[0.90625rem]"
-        >
-          Shop XL Boxes
-        </Button>
+        {showCta && (
+          <Button
+            href={routes.xlBoxes}
+            variant="light"
+            className="mt-7 h-12 px-7 text-[0.9375rem] lg:mt-[1.3125rem] lg:h-[2.5rem] lg:w-[11.75rem] lg:px-0 lg:text-[0.90625rem]"
+          >
+            Shop XL Boxes
+          </Button>
+        )}
       </div>
 
       <div className="relative aspect-[16/10] lg:absolute lg:inset-y-0 lg:right-0 lg:left-[calc(50%-10.1875rem)] lg:aspect-auto">

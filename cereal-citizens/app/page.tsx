@@ -3,7 +3,6 @@ import Hero from "@/components/Hero";
 import CollectiblesSection from "@/components/CollectiblesSection";
 import XLBoxesSection from "@/components/XLBoxesSection";
 import StreetGallery from "@/components/StreetGallery";
-import CartDrawer from "@/components/CartDrawer";
 
 export default function Home() {
   return (
@@ -15,7 +14,6 @@ export default function Home() {
         <XLBoxesSection />
       </main>
       <StreetGallery />
-      <CartDrawer />
     </>
   );
 }

@@ -1,4 +1,4 @@
-import { products } from "@/data/products";
+import { collectibles } from "@/data/products";
 import ProductCard from "./ProductCard";
 import { MarkerCircle, MarkerUnderline } from "./HandDrawn";
 
@@ -40,7 +40,7 @@ export default function CollectiblesSection() {
         </div>
 
         <div className="mt-10 grid gap-4 md:grid-cols-2 md:gap-5 lg:contents">
-          {products.map((product, i) => (
+          {collectibles.map((product, i) => (
             <ProductCard
               key={product.id}
               product={product}

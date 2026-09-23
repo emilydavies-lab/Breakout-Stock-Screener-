@@ -2,16 +2,15 @@ export const anchors = {
   collectibles: "collectibles",
   xlBoxes: "xl-boxes",
   inTheWild: "in-the-wild",
-  ourStory: "our-story",
-  faq: "faq",
 } as const;
 
-export const navLinks = [
-  { label: "Shop", href: `#${anchors.collectibles}` },
-  { label: "Our Story", href: `#${anchors.ourStory}` },
-  { label: "In the Wild", href: `#${anchors.inTheWild}` },
-  { label: "FAQ", href: `#${anchors.faq}` },
-];
+export const routes = {
+  home: "/",
+  collectibles: `/#${anchors.collectibles}`,
+  xlBoxes: "/xl-boxes",
+} as const;
+
+export const navLinks = [{ label: "Shop", href: routes.collectibles }];
 
 export const socials = {
   handle: "@cerealcitizens",
