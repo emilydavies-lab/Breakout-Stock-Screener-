@@ -29,7 +29,7 @@ Put the files in `public/images/`. All images are ChatGPT images, made to match 
 
 | File | Current size | Used for |
 | --- | --- | --- |
-| `rice-ebys-box.png` | 549 × 800, transparent, ChatGPT product shot | Blue box, product card + cart |
+| `rice-ebys-box.png` | 547 × 800, transparent, ChatGPT product shot | Blue box, product card + cart |
 | `lorne-pops-box.png` | 549 × 800, transparent, ChatGPT product shot | Yellow box, product card + cart |
 | `hero-vancouver.jpg` | 1700 × 1127 (≈1.51:1), ChatGPT photo with sky extended | Hero, full-bleed cover. On mobile it's cropped 4:5 and on tablet square, both toward the right |
 | `xl-vancouver.jpg` | 1536 × 1024, ChatGPT photo, cropped by CSS (`object-position` 50% 22%) | XL Boxes, right 66%. 16:10 on mobile |

@@ -17,7 +17,7 @@ export const products: Product[] = [
     currency: "CAD",
     image: {
       src: "/images/rice-ebys-box.png",
-      width: 549,
+      width: 547,
       height: 800,
       alt: "Rice Eby’s limited election edition cereal box, blue packaging",
     },
